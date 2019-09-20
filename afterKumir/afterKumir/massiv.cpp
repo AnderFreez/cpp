@@ -2,19 +2,33 @@
 
 using namespace std;
 
-void arrayOut(int* a, int size)
+namespace myArray
 {
-	for (int i = 0; i < size; i++)
+	// input array
+	void arrayIn(int* a, int size)
 	{
-		cout << a[i] << " ";
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
 	}
-	cout << endl;
-}
 
-void arrayRand(int* a, int size)
-{
-	for (int i = 0; i < size; i++)
+	// print array
+	void arrayOut(int* a, int size)
 	{
-		a[i] = rand();
+		for (int i = 0; i < size; i++)
+		{
+			cout << a[i] << " ";
+		}
+		cout << endl;
+	}
+
+	// rand array
+	void arrayRand(int* a, int size)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			a[i] = rand() % 100;
+		}
 	}
 }
