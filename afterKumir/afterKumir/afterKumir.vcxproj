@@ -134,6 +134,9 @@
     <ClInclude Include="myMath.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="hw200919.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

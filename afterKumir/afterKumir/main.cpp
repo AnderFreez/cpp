@@ -10,7 +10,7 @@ int main()
 	int a[5];
 	myArray::arrayRand(a, 5);
 	myArray::arrayOut(a, 5);
-	sort::swap(a, 5, 0, 4);
+	sort::bubble(a, 5);
 	myArray::arrayOut(a, 5);
 	
 	return 0;

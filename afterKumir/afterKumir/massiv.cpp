@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -26,6 +27,7 @@ namespace myArray
 	// rand array
 	void arrayRand(int* a, int size)
 	{
+		srand(time(0));
 		for (int i = 0; i < size; i++)
 		{
 			a[i] = rand() % 100;
