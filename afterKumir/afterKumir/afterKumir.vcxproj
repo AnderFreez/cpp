@@ -127,13 +127,16 @@
     <ClCompile Include="factorial.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiv.cpp" />
+    <ClCompile Include="max.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="Stepen.cpp" />
+    <ClCompile Include="taskWithArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h" />
     <ClInclude Include="myMath.h" />
     <ClInclude Include="sort.h" />
+    <ClInclude Include="taskWithArray.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw200919.txt" />
