@@ -7,11 +7,12 @@ using namespace std;
 
 int main()
 {
-	int a[5];
+	/*int a[5];
 	myArray::arrayRand(a, 5);
 	myArray::arrayOut(a, 5);
 	sort::bubble(a, 5);
-	myArray::arrayOut(a, 5);
+	myArray::arrayOut(a, 5);*/
+	cout << arithmeticMean(1234);
 	
 	return 0;
 }

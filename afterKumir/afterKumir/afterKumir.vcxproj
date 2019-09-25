@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arithmetic mean.cpp" />
     <ClCompile Include="factorial.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiv.cpp" />
