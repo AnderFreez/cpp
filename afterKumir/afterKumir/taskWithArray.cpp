@@ -244,4 +244,43 @@ namespace taskWithArray
 
 		return sum - product;
 	}
+
+	// return second max
+	int task11(int* a, int size)
+	{
+		int max1 = INT_MIN;
+		int max2 = INT_MIN;
+
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > max1)
+			{
+				max2 = max1;
+				max1 = a[i];
+				continue;
+			}
+			if (a[i] > max2 && a[i] <= max1)
+			{
+				max2 = a[i];
+				continue;
+			}
+		}
+
+		return max2;
+	}
+
+	// second max from internet doen't work properly. It's a pity :(
+	int task12(int* a, int size)
+	{
+		int max1 = INT_MIN;
+		int max2 = INT_MIN;
+
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > max1) max1 = a[i];
+			if (a[i] > max2 && max2 != max1) max2 = a[i];
+		}
+
+		return max2;
+	}
 }

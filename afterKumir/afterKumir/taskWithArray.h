@@ -1,4 +1,5 @@
 #pragma once
+
 namespace taskWithArray
 {
 	/*
@@ -36,8 +37,8 @@ namespace taskWithArray
 	если количество чётных элементов больше, чем количество нечётных,
 	и максимальный нечётный элемент,
 	если количество нечётных больше, чем количество чётных.
-Если количество чётных равно количеству нечётных,
-то вернуть сумму элементов массива.
+	Если количество чётных равно количеству нечётных,
+	то вернуть сумму элементов массива.
     */
 	int task6(int* a, int size);
 	
@@ -64,4 +65,10 @@ namespace taskWithArray
 	кратных 3 и произведением элементов, кратных 7. 
 	*/
 	int task10(int* a, int size);
+
+	// return second max
+	int task11(int* a, int size);
+
+	// second max from internet
+	int task12(int* a, int size);
 }
