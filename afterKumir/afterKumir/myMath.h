@@ -10,10 +10,10 @@ namespace myMath
 	// max
 	int max(int a, int b, int c, int d);
 
-
-
-int arithmeticMean(int a);
+	int arithmeticMean(int a);
+	
 	//
 	int max(int* a, int size);
 
 	int min(int* a, int size);
+}

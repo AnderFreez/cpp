@@ -1,3 +1,5 @@
+#include "Limits.h"
+
 namespace taskWithArray
 {
 	/*
@@ -67,13 +69,13 @@ namespace taskWithArray
 	int task4(int* a, int size)
 	{
 		int result = 0;
-			for (int i = 0; i < size; i++)
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] % 7 == 0 && a[i] % 10 == 9 && a[i] > result)
 			{
-				if (a[i] % 7 == 0 && a[i] % 10 == 9)
-				{
-					result += a[i];
-				}
+				result = a[i];
 			}
+		}
 		return result;
 	}
 
@@ -86,9 +88,9 @@ namespace taskWithArray
 		int result = 0;
 		for (int i = 0; i < size; i++)
 		{
-			if (a[i] % 2 == 0 && 7 < a[i] > 78)
+			if (a[i] % 2 == 0 && 7 < a[i] && a[i] < 78)
 			{
-				result = +1;
+				result += 1;
 			}
 		}
 		return result;
@@ -104,7 +106,50 @@ namespace taskWithArray
 	*/
 	int task6(int* a, int size)
 	{
+		#pragma region initialize variables
+		int oddAmount = 0;
+		int evenAmount = 0;
+		int maxOdd = INT_MIN;
+		int maxEven = INT_MIN;
+		int sum = 0;
+		#pragma endregion
 
+		for (int i = 0; i < size; i++)
+		{
+			sum += a[i];
+			if (a[i] % 2 == 0)
+			{
+				++evenAmount;
+				if (a[i] > maxEven)
+				{
+					maxEven = a[i];
+				}
+			}
+			else
+			{
+				++oddAmount;
+				if (a[i] > maxOdd)
+				{
+					maxOdd = a[i];
+				}
+			}
+		}
+
+		#pragma region return values
+
+		if (evenAmount == oddAmount)
+		{
+			return sum;
+		}
+		if (evenAmount > oddAmount)
+		{
+			return maxEven;
+		}
+		if (oddAmount > evenAmount)
+		{
+			return maxOdd;
+		}
+		#pragma endregion
 	}
 
 	/*
@@ -118,10 +163,10 @@ namespace taskWithArray
 		{
 			if (a[i] % 7 == 0)
 			{
-				result = a[i];
+				result += a[i];
 			}
 		}
-		return result;
+		return double(result) / size;
 	}
 
 	/*
@@ -130,15 +175,15 @@ namespace taskWithArray
 	*/
 	int task8(int* a, int size)
 	{
-		int result = 0;
+		int amountPositive = 0;
 		for (int i = 0; i < size; i++)
 		{
 			if (a[i] > 0)
 			{
-
+				++amountPositive;
 			}
 		}
-
+		return double(amountPositive) / size * 100;
 	}
 
 	/*
@@ -154,11 +199,11 @@ namespace taskWithArray
 		{
 			if (a[i] % 2 == 0)
 			{
-				chet = +1;
+				chet += 1;
 			}
 			if (not(a[i] % 2 == 0 ))
 			{
-				nechet = +1;
+				nechet += 1;
 			}
 		}
 		if (chet > nechet)
@@ -178,18 +223,25 @@ namespace taskWithArray
 	*/
 	int task10(int* a, int size)
 	{
-		int summ = 0;
-		int pro = 0;
-		int result = 0;
+		#pragma region intialization
+		int sum = 0;
+		int product = 1;
+		#pragma endregion
+		
+		#pragma region algorithm
 		for (int i = 0; i < size; i++)
 		{
 			if (a[i] % 3 == 0)
 			{
-				summ =+ 1
+				sum += 1;
+			}
+			if (a[i] % 7 == 0)
+			{
+				product *= a[i];
 			}
 		}
+		#pragma endregion
 
-
-
+		return sum - product;
 	}
 }
