@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="myMath.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="taskWithArray.h" />

@@ -3,17 +3,15 @@
 #include "sort.h"
 #include "array.h"
 #include "taskWithArray.h"
+#include "Header.h"
 
 using namespace std;
 
 int main()
 {
-	int const n = 5;
-	int a[n];
-
-	myArray::arrayIn(a, n);
-
-	cout << taskWithArray::task12(a, n);
-
+	
+	int a[5];
+	myArray::arrayRand(a, 5);
+	myArray::arrayOut(a, 5);
 	return 0;
 }
