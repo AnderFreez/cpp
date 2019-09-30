@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw200919.txt" />
+    <Text Include="hw270919.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

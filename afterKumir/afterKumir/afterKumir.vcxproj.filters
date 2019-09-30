@@ -1,60 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="arithmetic mean.cpp">
+      <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="factorial.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="massiv.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="max.cpp">
+      <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Stepen.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="sort.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="arithmetic mean.cpp">
-    <ClCompile Include="max.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="taskWithArray.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="sort.cpp">
+      <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="array.h">
+      <Filter>header</Filter>
+    </ClInclude>
     <ClInclude Include="myMath.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="sort.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="array.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="taskWithArray.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>header</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{e56454fc-e7d8-41d4-86e5-fa598fd9b37c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{146a62d2-8dab-4915-a19b-71e7b0fe04cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hw">
+      <UniqueIdentifier>{a5ede7ba-6dee-4224-b3aa-c451f82d72e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw200919.txt">
-      <Filter>Файлы ресурсов</Filter>
+      <Filter>hw</Filter>
+    </Text>
+    <Text Include="hw270919.txt">
+      <Filter>hw</Filter>
     </Text>
   </ItemGroup>
 </Project>
