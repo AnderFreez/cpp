@@ -1,5 +1,6 @@
 #include "Limits.h"
-
+#include <iostream>
+using namespace std;
 namespace taskWithArray
 {
 	/*
@@ -320,5 +321,31 @@ namespace taskWithArray
 			}
 		}
 		return max3;
+	}
+
+	/* принимает массив и возвращает среднее арифметическое десятичных элементов,
+	сумма цифр которых равна 10
+	*/
+	int task14(int* a, int size)
+	{
+		int ed = 0;
+		int des = 0;
+		int result = INT_MIN;
+		for (int i = 0; i < size; i++)
+		{
+			if (des + ed = 10)
+			{
+				result += a[i];
+			}
+			
+		}
+		if (result = INT_MIN)
+		{
+			cout << "нет чисел сумма цифр которых равна 10";
+		}
+		else
+		{
+			return result;
+		}
 	}
 }
