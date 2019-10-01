@@ -80,7 +80,10 @@ namespace taskWithArray
 	*/
 	int task14(int* a, int size);
 
-
-
+	/*
+	принимает массив и возвращает десятичный
+	элемент с максимальной суммой цифр
+	*/
+	int task15(int* a, int size);
 
 }
