@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="arithmetic mean.cpp" />
+    <ClCompile Include="arithmetic.cpp" />
     <ClCompile Include="factorial.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiv.cpp" />
@@ -133,6 +134,7 @@
     <ClCompile Include="taskWithArray.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="arithmetic.h" />
     <ClInclude Include="array.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="myMath.h" />

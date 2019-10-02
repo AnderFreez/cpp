@@ -85,5 +85,4 @@ namespace taskWithArray
 	элемент с максимальной суммой цифр
 	*/
 	int task15(int* a, int size);
-
 }

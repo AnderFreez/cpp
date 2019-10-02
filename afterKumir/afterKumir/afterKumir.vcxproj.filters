@@ -25,6 +25,9 @@
     <ClCompile Include="sort.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="arithmetic.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h">
@@ -40,6 +43,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="Header.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmetic.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
