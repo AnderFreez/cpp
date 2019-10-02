@@ -15,7 +15,8 @@ namespace arithmetic
 		des = a % 10;
 		a = a / 10;
 		sot = a % 10;
-
+		d = ed + des + sot;
+		return d;
 	}
 
 
