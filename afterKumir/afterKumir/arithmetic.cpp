@@ -4,7 +4,7 @@ using namespace std;
 namespace arithmetic
 {
 	// +
-	int plus(int* a, int size, int a)
+	int plus(int* b, int size, int a)
 	{
 		int ed = INT_MIN;
 		int des = INT_MIN;
