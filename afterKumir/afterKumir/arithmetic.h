@@ -2,14 +2,14 @@
 namespace arithmetic
 {
 	// +
-	int plus(int* a, int size);
+	int plus(int* b, int size);
 
 	// -
-	int minus(int* a, int size);
+	int minus(int* b, int size);
 
 	// *
-	int multiplication(int* a, int size);
+	int multiplication(int* b, int size);
 
 	// :
-	int division(int* a, int size);
+	int division(int* b, int size);
 }
