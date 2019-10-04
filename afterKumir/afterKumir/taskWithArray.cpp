@@ -323,38 +323,90 @@ namespace taskWithArray
 		return max3;
 	}
 
-	/* принимает массив и возвращает среднее арифметическое десятичных элементов,
+	/* принимает массив и возвращает среднее арифметическое двухзначных элементов,
 	сумма цифр которых равна 10
 	*/
-	//int task14(int* a, int size)
-	//{
-	//	int ed = 0;
-	//	int des = 0;
-	//	int result = INT_MIN;
-	//	for (int i = 0; i < size; i++)
-	//	{
-	//		if (des + ed = 10)
-	//		{
-	//			result += a[i];
-	//		}
-	//		
-	//	}
-	//	if (result = INT_MIN)
-	//	{
-	//		cout << "нет чисел сумма цифр которых равна 10";
-	//	}
-	//	else
-	//	{
-	//		return result;
-	//	}
-	//}
+	int task14(int* a, int size)
+	{
+		int ed = 0;
+		int des = 0;
+		int result = INT_MIN;
+		for (int i = 0; i < size; i++)
+		{
+			if (des + ed = 10)
+			{
+				result += a[i];
+			}
+			
+		}
+		if (result = INT_MIN)
+		{
+			cout << "нет чисел сумма цифр которых равна 10";
+		}
+		else
+		{
+			return result;
+		}
+	}
 
-	///*
-	//принимает массив и возвращает десятичный
-	//элемент с максимальной суммой цифр
-	//*/
-	//int task15(int* a, int size)
-	//{
-	//	
-	//}
+	/*
+	принимает массив и возвращает десятичный
+	элемент с максимальной суммой цифр
+	*/
+	int task15(int* a, int size)
+	{
+		int b = INT_MIN;
+		int ed = INT_MIN;
+		int des = INT_MIN;
+		int sot = INT_MIN;
+		int d = INT_MIN;
+		ed = b % 10;
+		b = b / 10;
+		des = b % 10;
+		b = b / 10;
+		sot = b % 10;
+		d = ed + des + sot;
+		return d;
+	}
+
+	/*
+	принимает массив и возвращает
+	трёхзначный элемент с 
+	максимальным произведением цифр
+	*/
+	int task16(int* a, int size)
+	{
+		int b = INT_MIN;
+		int ed = INT_MIN;
+		int des = INT_MIN;
+		int sot = INT_MIN;
+		int d = INT_MIN;
+		ed = b % 10;
+		b = b / 10;
+		des = b % 10;
+		b = b / 10;
+		sot = b % 10;
+		d = ed * des * sot;
+		return d;
+	}
+
+	/*
+	принимает массив и возвращает
+	сумму всех цифр всех трёхзначных элементов массива
+	*/
+	int task17(int* a, int size)
+	{
+		int b = INT_MIN;
+		int ed = INT_MIN;
+		int des = INT_MIN;
+		int sot = INT_MIN;
+		int d = INT_MIN;
+		ed = b % 10;
+		b = b / 10;
+		des = b % 10;
+		b = b / 10;
+		sot = b % 10;
+		d = ed + des + sot;
+		return d;
+	}
 }
