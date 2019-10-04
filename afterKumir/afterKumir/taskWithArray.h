@@ -46,7 +46,7 @@ namespace taskWithArray
 	принимает массив и возвращает среднее арифметическое элементов,
 	кратных 7.
 	*/
-	int task7(int* a, int size);
+	double task7(int* a, int size);
 
 	/*
 	принимает массив и возвращает процент

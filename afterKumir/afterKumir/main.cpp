@@ -10,11 +10,9 @@ using namespace std;
 
 int main()
 {
-	
-	int a[5];
-	myArray::arrayRand(a, 5);
-	myArray::arrayOut(a, 5);
-	arithmetic::plus(a, 5);
-	myArray::arrayOut(a, 5);
+	int a[3];
+	myArray::arrayRand(a, 3);
+	myArray::arrayOut(a, 3);
+	cout << taskWithArray::task17(a, 3);
 	return 0;
 }

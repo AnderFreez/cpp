@@ -1,5 +1,6 @@
 #include "Limits.h"
 #include <iostream>
+#include "arithmetic.h"
 using namespace std;
 namespace taskWithArray
 {
@@ -157,7 +158,7 @@ namespace taskWithArray
 	принимает массив и возвращает среднее арифметическое элементов,
 	кратных 7.
 	*/
-	int task7(int* a, int size)
+	double task7(int* a, int size)
 	{
 		int result = 0;
 		for (int i = 0; i < size; i++)
@@ -323,10 +324,11 @@ namespace taskWithArray
 		return max3;
 	}
 
-	/* принимает массив и возвращает среднее арифметическое двухзначных элементов,
+	/* принимает массив трёхзначных чисел и возвращает
+	среднее арифметическое трёхзначных чисел,
 	сумма цифр которых равна 10
 	*/
-	int task14(int* a, int size)
+	/*int task14(int* a, int size)
 	{
 		int ed = 0;
 		int des = 0;
@@ -347,66 +349,103 @@ namespace taskWithArray
 		{
 			return result;
 		}
-	}
-
-	/*
-	принимает массив и возвращает десятичный
-	элемент с максимальной суммой цифр
-	*/
-	int task15(int* a, int size)
-	{
-		int b = INT_MIN;
-		int ed = INT_MIN;
-		int des = INT_MIN;
-		int sot = INT_MIN;
-		int d = INT_MIN;
-		ed = b % 10;
-		b = b / 10;
-		des = b % 10;
-		b = b / 10;
-		sot = b % 10;
-		d = ed + des + sot;
-		return d;
-	}
+	}*/
 
 	/*
 	принимает массив и возвращает
-	трёхзначный элемент с 
+	число с максимальной суммой цифр
+	*/
+	int task15(int* a, int size)
+	{
+		int maxSum = 0;
+		int index = 0;
+		for (int i = 0; i < size; i++)
+		{
+			int sum = arithmetic::sumOfDigit(a[i]);
+			if (sum > maxSum)
+			{
+				maxSum = sum;
+				index = i;
+			}
+		}
+
+		return a[index];
+	}
+
+	/*
+	принимает массив трёхзначных чисел и возвращает
+	число с 
 	максимальным произведением цифр
 	*/
 	int task16(int* a, int size)
 	{
-		int b = INT_MIN;
-		int ed = INT_MIN;
-		int des = INT_MIN;
-		int sot = INT_MIN;
-		int d = INT_MIN;
-		ed = b % 10;
-		b = b / 10;
-		des = b % 10;
-		b = b / 10;
-		sot = b % 10;
-		d = ed * des * sot;
-		return d;
+		int maxMult = 0;
+		int index = -1;
+		for (int i = 0; i < size; i++)
+		{
+			int sum = arithmetic::multiplicationOfDigit(a[i]);
+			if (sum > maxMult)
+			{
+				maxMult = sum;
+				index = i;
+			}
+		}
+
+		return a[index];
 	}
 
 	/*
-	принимает массив и возвращает
-	сумму всех цифр всех трёхзначных элементов массива
+	принимает массив трёхзначных чисел и возвращает
+	сумму всех цифр всех массива
 	*/
 	int task17(int* a, int size)
 	{
-		int b = INT_MIN;
-		int ed = INT_MIN;
-		int des = INT_MIN;
-		int sot = INT_MIN;
-		int d = INT_MIN;
-		ed = b % 10;
-		b = b / 10;
-		des = b % 10;
-		b = b / 10;
-		sot = b % 10;
-		d = ed + des + sot;
-		return d;
+		int sum = 0;
+		for (int i = 0; i < size; i++)
+		{
+			sum += arithmetic::sumOfDigit(a[i]);
+		}
+		return sum;
+	}
+	
+	/*
+	элемент с максимальной суммой цифр, если в массиве чётных элементов больше, чем нечётных
+	элемент с максимальным произведением цифр, если в массиве нечётных элементов больше, чем чётных
+	среднее арифметическое всех цифр всех элементов массива, если в массиве чётных и нечётных элементов поровну.
+	*/
+	int task18AmountOfEven(int* a, int size)
+	{
+		// type tour code here
+		return 0;
+	}
+
+	int task18AmountOfOdd(int* a, int size)
+	{
+		// type your code here
+		return 0;
+	}
+
+	int task18ArithmeticMean(int* a, int size)
+	{
+		// type your code here
+		return 0;
+	}
+
+	int task18(int* a, int size)
+	{
+		if (task18AmountOfEven(a, size) == task18AmountOfOdd(a, size))
+		{
+			return task18ArithmeticMean(a, size);
+		}
+
+		if (task18AmountOfEven(a, size) > task18AmountOfOdd(a, size))
+		{
+			return task15(a, size);
+		}
+
+		if (task18AmountOfEven(a, size) < task18AmountOfOdd(a, size))
+		{
+			return task16(a, size);
+		}
 	}
 }

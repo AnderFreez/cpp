@@ -4,60 +4,48 @@ using namespace std;
 namespace arithmetic
 {
 	// +
-	int plus(int* b, int size)
+	int sumOfDigit3(int number)
 	{
-		int a = INT_MIN;
-		int ed = INT_MIN;
-		int des = INT_MIN;
-		int sot = INT_MIN;
-		int d = INT_MIN;
-		ed = a % 10;
-		a = a / 10;
-		des = a % 10;
-		a = a / 10;
-		sot = a % 10;
-		d = ed + des + sot;
-		cout << d;
-		return d;
+		int ed = number % 10;
+		number /= 10;
+		int des = number % 10;
+		number /= 10;
+		int sot = number % 10;
+
+		return ed + des + sot;
 	}
-	
-	// -
-	int minus(int* b, int size)
+
+	int sumOfDigit(int number)
 	{
-		int ed = INT_MIN;
-		int des = INT_MIN;
-		int sot = INT_MIN;
-		int d = INT_MIN;
-		int a = INT_MIN;
-		ed = a % 10;
-		a = a / 10;
-		des = a % 10;
-		a = a / 10;
-		sot = a % 10;
-		if (ed > des && ed > sot && des > sot)
+		int sum = 0;
+		while (number != 0)
 		{
-			d = ed - des - sot;
+			sum += number % 10;
+			number /= 10;
 		}
-		if (ed > des && ed > sot && des < sot)
+		return sum;
+	}
+
+	// *
+	int multiplicationOfDigit3(int number)
+	{
+		int ed = number % 10;
+		number /= 10;
+		int des = number % 10;
+		number /= 10;
+		int sot = number % 10;
+
+		return ed * des * sot;
+	}
+
+	int multiplicationOfDigit(int number)
+	{
+		int mult = 1;
+		while (number != 0)
 		{
-			d = ed - sot - des;
+			mult *= number % 10;
+			number /= 10;
 		}
-		if (ed < des && des > sot && ed < sot)
-		{
-			d = des - sot - ed;
-		}
-		if (ed < des && des > sot && ed > sot)
-		{
-			d = des - ed - sot;
-		}
-		if (ed < sot && des < sot && ed > sot)
-		{
-			d = sot - ed - sot;
-		}
-		if (ed < sot && des < sot && ed < sot)
-		{
-			d = sot - sot - ed;
-		}
-		return d;
+		return mult;
 	}
 }
