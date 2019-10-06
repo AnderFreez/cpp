@@ -328,20 +328,20 @@ namespace taskWithArray
 	среднее арифметическое трёхзначных чисел,
 	сумма цифр которых равна 10
 	*/
-	/*int task14(int* a, int size)
+	int task14(int* a, int size)
 	{
 		int ed = 0;
 		int des = 0;
 		int result = INT_MIN;
 		for (int i = 0; i < size; i++)
 		{
-			if (des + ed = 10)
+			if (des + ed == 10)
 			{
 				result += a[i];
 			}
 			
 		}
-		if (result = INT_MIN)
+		if (result == INT_MIN)
 		{
 			cout << "нет чисел сумма цифр которых равна 10";
 		}
@@ -349,7 +349,7 @@ namespace taskWithArray
 		{
 			return result;
 		}
-	}*/
+	}
 
 	/*
 	принимает массив и возвращает
@@ -415,20 +415,42 @@ namespace taskWithArray
 	*/
 	int task18AmountOfEven(int* a, int size)
 	{
-		// type tour code here
-		return 0;
+		int even = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] / 2 == 0)
+			{
+				even += 1;
+			}
+		}
+		return even;
 	}
 
 	int task18AmountOfOdd(int* a, int size)
 	{
-		// type your code here
-		return 0;
+		int odd = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (not(a[i] % 2 == 0))
+			{
+				odd += 1;
+			}
+		}
+		return odd;
 	}
 
-	int task18ArithmeticMean(int* a, int size)
+	double task18ArithmeticMean(int* a, int size)
 	{
-		// type your code here
-		return 0;
+		int result = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (task18AmountOfEven(a, 4) == task18AmountOfOdd(a, 4))
+			{
+				result += a[i];
+			}
+			return double(result) / size;
+
+		}
 	}
 
 	int task18(int* a, int size)

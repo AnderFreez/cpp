@@ -4,17 +4,6 @@ using namespace std;
 namespace arithmetic
 {
 	// +
-	int sumOfDigit3(int number)
-	{
-		int ed = number % 10;
-		number /= 10;
-		int des = number % 10;
-		number /= 10;
-		int sot = number % 10;
-
-		return ed + des + sot;
-	}
-
 	int sumOfDigit(int number)
 	{
 		int sum = 0;
@@ -27,17 +16,6 @@ namespace arithmetic
 	}
 
 	// *
-	int multiplicationOfDigit3(int number)
-	{
-		int ed = number % 10;
-		number /= 10;
-		int des = number % 10;
-		number /= 10;
-		int sot = number % 10;
-
-		return ed * des * sot;
-	}
-
 	int multiplicationOfDigit(int number)
 	{
 		int mult = 1;
