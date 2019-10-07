@@ -126,6 +126,7 @@
     <ClCompile Include="arithmetic mean.cpp" />
     <ClCompile Include="arithmetic.cpp" />
     <ClCompile Include="factorial.cpp" />
+    <ClCompile Include="inverted.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiv.cpp" />
     <ClCompile Include="max.cpp" />

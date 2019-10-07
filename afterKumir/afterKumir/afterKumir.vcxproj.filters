@@ -28,6 +28,7 @@
     <ClCompile Include="arithmetic.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="inverted.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h">

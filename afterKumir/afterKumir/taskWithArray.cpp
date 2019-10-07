@@ -343,7 +343,7 @@ namespace taskWithArray
 		}
 		if (result == INT_MIN)
 		{
-			cout << "нет чисел сумма цифр которых равна 10";
+			cout << "нет чисел сумма цифр которых равна 10";// исправить
 		}
 		else
 		{
@@ -418,9 +418,9 @@ namespace taskWithArray
 		int even = 0;
 		for (int i = 0; i < size; i++)
 		{
-			if (a[i] / 2 == 0)
+			if (a[i] % 2 == 0)
 			{
-				even += 1;
+				++even;
 			}
 		}
 		return even;
@@ -431,11 +431,12 @@ namespace taskWithArray
 		int odd = 0;
 		for (int i = 0; i < size; i++)
 		{
-			if (not(a[i] % 2 == 0))
+			if (a[i] % 2 == 1)
 			{
-				odd += 1;
+				++odd;
 			}
 		}
+
 		return odd;
 	}
 
@@ -444,16 +445,13 @@ namespace taskWithArray
 		int result = 0;
 		for (int i = 0; i < size; i++)
 		{
-			if (task18AmountOfEven(a, 4) == task18AmountOfOdd(a, 4))
-			{
-				result += a[i];
-			}
-			return double(result) / size;
-
+			result += a[i];
 		}
+
+		return double(result) / size;
 	}
 
-	int task18(int* a, int size)
+	double task18(int* a, int size)
 	{
 		if (task18AmountOfEven(a, size) == task18AmountOfOdd(a, size))
 		{
