@@ -71,5 +71,8 @@
     <Text Include="hw071019.txt">
       <Filter>hw</Filter>
     </Text>
+    <Text Include="hw041019.txt">
+      <Filter>hw</Filter>
+    </Text>
   </ItemGroup>
 </Project>
