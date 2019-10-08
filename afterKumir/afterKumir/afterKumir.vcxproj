@@ -143,6 +143,7 @@
     <ClInclude Include="taskWithArray.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="hw071019.txt" />
     <Text Include="hw200919.txt" />
     <Text Include="hw270919.txt" />
   </ItemGroup>
