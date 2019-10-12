@@ -13,5 +13,6 @@ int main()
 	int a[5];
 	myArray::arrayIn(a, 5);
 	cout << taskWithArray::task14(a, 5);
+	cout << myMath::inverted(1234);
 	return 0;
 }

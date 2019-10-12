@@ -107,5 +107,5 @@ namespace taskWithArray
 	среднее арифметическое всех цифр всех элементов массива,
 	если в массиве чётных и нечётных элементов поровну.
 	*/
-	int task18(int* a, int size);
+	double task18(int* a, int size);
 }

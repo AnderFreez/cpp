@@ -28,6 +28,7 @@
     <ClCompile Include="arithmetic.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="inverted.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h">
@@ -65,6 +66,12 @@
       <Filter>hw</Filter>
     </Text>
     <Text Include="hw270919.txt">
+      <Filter>hw</Filter>
+    </Text>
+    <Text Include="hw071019.txt">
+      <Filter>hw</Filter>
+    </Text>
+    <Text Include="hw041019.txt">
       <Filter>hw</Filter>
     </Text>
   </ItemGroup>
