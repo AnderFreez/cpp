@@ -10,8 +10,8 @@ using namespace std;
 
 int main()
 {
-	int a[4];
-	myArray::arrayIn(a, 4);
-	cout << taskWithArray::task18(a, 4);
+	int a[5];
+	myArray::arrayIn(a, 5);
+	cout << taskWithArray::task14(a, 5);
 	return 0;
 }
