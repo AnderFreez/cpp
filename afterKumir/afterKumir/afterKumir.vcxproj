@@ -132,6 +132,7 @@
     <ClCompile Include="max.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="Stepen.cpp" />
+    <ClCompile Include="sum.cpp" />
     <ClCompile Include="taskWithArray.cpp" />
   </ItemGroup>
   <ItemGroup>

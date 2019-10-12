@@ -18,4 +18,14 @@ namespace myMath
 	int min(int* a, int size);
 
 	int inverted(int number);
+
+	int factorial2(int n);
+
+	int sum(int n);
+
+	int sumOfEven(int n);
+
+	int sumOfOddDigits(int n);
+
+	int signSum(int n);
 }

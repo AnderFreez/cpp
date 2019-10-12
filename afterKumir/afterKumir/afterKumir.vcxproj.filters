@@ -28,7 +28,12 @@
     <ClCompile Include="arithmetic.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="inverted.cpp" />
+    <ClCompile Include="inverted.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="sum.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h">
