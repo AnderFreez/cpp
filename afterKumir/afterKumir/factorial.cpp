@@ -1,8 +1,11 @@
 #include "myMath.h"
+#include <cassert>
+
 namespace myMath
 {
 	int myMath::factorial(int n)
 	{
+		assert(n >= 1);
 		int f = 1;
 		for (int i = 2; i <= n; ++i)
 		{
@@ -10,10 +13,11 @@ namespace myMath
 		}
 		return f;
 	}
-	int factorial2(int n)
+
+	int factorialSum(int n)
 	{
 		int s = 0;
-		for (int i = 0; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 		{
 			s += factorial(i);
 		}

@@ -5,16 +5,17 @@ namespace myMath
 	int sum(int n)
 	{
 		int sum = 0;
-		for (int i = 0; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 		{
 			sum += i;
 		}
 		return sum;
 	}
+
 	int sumOfEven(int n)
 	{
 		int sum = 0;
-		for (int  i = 0; i <= n; i++)
+		for (int  i = 1; i <= n; i++)
 		{
 			if (i % 2 == 0)
 			{
@@ -23,10 +24,11 @@ namespace myMath
 		}
 		return sum;
 	}
-	int sumOfOddDigits(int n)
+
+	int sumOfOdd(int n)
 	{
 		int sum = 0;
-		for (int i = 0; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 		{
 			if (i % 2 != 0)
 			{
@@ -35,15 +37,21 @@ namespace myMath
 		}
 		return sum;
 	}
+
 	int signSum(int n)
 	{
 		int sign = 1;
 		int sum = 0;
-		for (int i = 0; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 		{
-			sum = sign * i;
+			sum += sign * i;
 			sign *= -1;
 		}
 		return sum;
+	}
+
+	int sumOfSquares(int n)
+	{
+
 	}
 }

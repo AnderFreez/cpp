@@ -10,6 +10,6 @@ using namespace std;
 
 int main()
 {
-	cout << myMath::sumOfEven(7);
+	cout << myMath::factorial(-3);
 	return 0;
 }
