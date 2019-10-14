@@ -10,6 +10,6 @@ using namespace std;
 
 int main()
 {
-	cout << myMath::factorial(-3);
+	cout << myMath::sumOfSquares(3);
 	return 0;
 }
