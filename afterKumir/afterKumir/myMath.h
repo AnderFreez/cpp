@@ -54,4 +54,10 @@ namespace myMath
 	Где x^2 = x * x
 	*/
 	int sumOfSquares(int n);
+
+	int sumOfOddDigits(int number);
+
+	int signSumOfDigits(int number);
+
+	int smartInverted(int number);
 }

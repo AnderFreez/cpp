@@ -5,11 +5,13 @@
 #include "taskWithArray.h"
 #include "Header.h"
 #include "arithmetic.h"
+#include <ctime>
 
 using namespace std;
 
 int main()
 {
-	cout << myMath::sumOfSquares(3);
+	setlocale(LC_ALL, "russian");
+	cout << "првиет";
 	return 0;
 }

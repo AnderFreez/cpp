@@ -43,7 +43,7 @@ namespace myMath
 		int sign = 1;
 		int sum = 0;
 		for (int i = 1; i <= n; i++)
-		{
+		{ 
 			sum += sign * i;
 			sign *= -1;
 		}
@@ -56,6 +56,35 @@ namespace myMath
 		for (int i = 0; i <= n; i++)
 		{
 			sum += i * i; // sum = sum + i * i
+		}
+		return sum;
+	}
+
+	int sumOfOddDigits(int number)
+	{
+		int sum = 0;
+		while (number != 0)
+		{
+			int digit = number % 10;
+			if (digit % 2 == 1)
+			{
+				sum += digit;
+			}
+			number /= 10;
+		}
+		return sum;
+	}
+
+	int signSumOfDigits(int number)
+	{
+		int sum = 0;
+		int sign = 1;
+		while (number != 0)
+		{
+			int digit = number % 10;
+			sum += sign * digit;
+			sign *= -1;
+			number /= 10;
 		}
 		return sum;
 	}

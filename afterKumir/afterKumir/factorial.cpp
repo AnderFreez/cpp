@@ -23,4 +23,15 @@ namespace myMath
 		}
 		return s;
 	}
+
+	int smartFactorialSum(int n)
+	{
+		int a = 1;
+		int sum = 0;
+		for (int i = 0; i <= n; i++)
+		{
+			sum += a * i;
+		}
+		return sum;
+	}
 }

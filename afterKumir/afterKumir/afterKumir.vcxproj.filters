@@ -34,6 +34,9 @@
     <ClCompile Include="sum.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="algorythmCompare.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h">
@@ -52,6 +55,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="arithmetic.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="algorythm.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
