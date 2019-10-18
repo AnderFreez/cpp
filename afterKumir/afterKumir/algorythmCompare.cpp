@@ -24,6 +24,6 @@ namespace algorythmCompare
 		}
 		int endTime2 = clock();
 		int time2 = endTime2 - startTime2;
-		cout << "Inverted time = " << time1 << endl << time2;
+		cout << "Inverted time = " << time1 << endl << "Smart Inverted time = " << time2;
 	}
 }

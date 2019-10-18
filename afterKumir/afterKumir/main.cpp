@@ -5,13 +5,12 @@
 #include "taskWithArray.h"
 #include "Header.h"
 #include "arithmetic.h"
-#include <ctime>
+#include "algorythm.h"
 
 using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "russian");
-	cout << "првиет";
+	algorythmCompare::invertedNumber();
 	return 0;
 }
