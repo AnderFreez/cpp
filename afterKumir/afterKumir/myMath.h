@@ -60,4 +60,6 @@ namespace myMath
 	int signSumOfDigits(int number);
 
 	int smartInverted(int number);
+
+	int CHTOTOwithDigit(int number);
 }

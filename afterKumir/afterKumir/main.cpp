@@ -11,6 +11,7 @@ using namespace std;
 
 int main()
 {
-	algorythmCompare::invertedNumber();
+
+	cout << myMath::CHTOTOwithDigit(111);
 	return 0;
 }
