@@ -37,4 +37,14 @@ namespace arithmetic
 		}
 		return amount;
 	}
+
+	int square(int number)
+	{
+		int result = 0;
+		for (int i = 1; i <= number; i++)
+		{
+			result = i * i;
+		}
+		return result;
+	}
 }
