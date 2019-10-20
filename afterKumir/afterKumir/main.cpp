@@ -11,7 +11,16 @@ using namespace std;
 
 int main()
 {
-
-	cout << myMath::CHTOTOwithDigit(111);
+	int digit;
+	cin >> digit;
+	for (int i = 1; i < 10; i++)
+	{
+		if (i % 2 == 0)
+		{
+			digit = i;
+			continue;
+		}esfdfesfed
+	}
+	cout << digit;
 	return 0;
 }

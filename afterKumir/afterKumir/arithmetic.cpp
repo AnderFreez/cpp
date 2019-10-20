@@ -47,4 +47,41 @@ namespace arithmetic
 		}
 		return result;
 	}
+
+	int square2(int x)
+	{
+		x *= x;
+		int y = x * x;
+		x *= x;
+		x *= x;
+		x += y;
+		return x;
+	}
+
+	int square3(int x)
+	{
+		int u = x;
+		x *= x;
+		int y = x + u;
+		x *= x;
+		x *= x;
+		x *= x;
+		x += y + u;
+		x += y;
+		return x;
+	}
+	
+	int sumDigitSquares(int number)
+	{
+		int sum = 0;
+		while (number != 0)
+		{
+			int digit = number % 10;
+			if (digit % 2 == 1)
+			{
+				sum += digit * digit;
+			}
+		}
+		return sum;
+	}
 }
