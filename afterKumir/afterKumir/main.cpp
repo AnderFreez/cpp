@@ -6,21 +6,12 @@
 #include "Header.h"
 #include "arithmetic.h"
 #include "algorythm.h"
+#include "test.h"
 
 using namespace std;
 
 int main()
 {
-	int digit;
-	cin >> digit;
-	for (int i = 1; i < 10; i++)
-	{
-		if (i % 2 == 0)
-		{
-			digit = i;
-			continue;
-		}esfdfesfed
-	}
-	cout << digit;
+	test::myMathTest::factorial();
 	return 0;
 }

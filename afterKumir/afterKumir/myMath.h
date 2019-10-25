@@ -7,6 +7,10 @@ namespace myMath
 	// degree
 	int degree(int a, int b);
 
+	int degree20(int x);
+
+	int degree23(int x);
+
 	// max
 	int max(int a, int b, int c, int d);
 
@@ -24,6 +28,12 @@ namespace myMath
     Например, примает 5, возвращает 1! + 2! + 3! + 4! + 5!.
 	*/
 	int factorialSum(int n);
+
+	/*
+	принимает натуральное n, возвращает 1! + 2! + 3! + ... + n!.
+	Например, примает 5, возвращает 1! + 2! + 3! + 4! + 5!.
+	*/
+	int smartFactorialSum(int n);
 
 	/*
 	принимает натуральное число n, возвращает сумму чисел от 1 до n, то есть 1 + 2 + 3 + 4 + .... + n.
@@ -61,5 +71,9 @@ namespace myMath
 
 	int smartInverted(int number);
 
-	int CHTOTOwithDigit(int number);
+	int task2(int number);
+
+	int sumSquaresOfOddDigits(int number);
+
+	int sumFactorialOfEvenDigits(int number);
 }

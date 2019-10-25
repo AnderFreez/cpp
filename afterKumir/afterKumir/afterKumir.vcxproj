@@ -126,6 +126,7 @@
     <ClCompile Include="algorythmCompare.cpp" />
     <ClCompile Include="arithmetic mean.cpp" />
     <ClCompile Include="arithmetic.cpp" />
+    <ClCompile Include="digits.cpp" />
     <ClCompile Include="factorial.cpp" />
     <ClCompile Include="inverted.cpp" />
     <ClCompile Include="main.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Stepen.cpp" />
     <ClCompile Include="sum.cpp" />
     <ClCompile Include="taskWithArray.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorythm.h" />
@@ -144,6 +146,7 @@
     <ClInclude Include="myMath.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="taskWithArray.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw041019.txt" />
@@ -151,6 +154,7 @@
     <Text Include="hw141019.txt" />
     <Text Include="hw181019.txt" />
     <Text Include="hw200919.txt" />
+    <Text Include="hw251019.txt" />
     <Text Include="hw270919.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
