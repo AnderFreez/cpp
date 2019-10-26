@@ -26,12 +26,13 @@ namespace myMath
 
 	int smartFactorialSum(int n)
 	{
-		int a = 1;
-		int sum = 0;
-		for (int i = 0; i <= n; i++)
+		int f = 1;
+		
+		for (int i = n; i >= 2; --i)
 		{
-			sum += a * i;
+			f = 1 + i * f;
 		}
-		return sum;
+
+		return f;
 	}
 }

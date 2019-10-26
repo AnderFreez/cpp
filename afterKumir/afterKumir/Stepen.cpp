@@ -31,4 +31,27 @@ namespace myMath
 		x *= y;
 		return x;
 	}
+
+	int degree20(int x)
+	{
+		x *= x;
+		x *= x;
+		int y = x;
+		x *= x;
+		x *= x;
+		x *= y;
+		return x;
+	}
+
+	int degree23(int x)
+	{
+		int y = x;
+		x *= x;
+		x *= x;
+		x *= x;
+		y = x / y;
+		x *= x;
+		x *= y;
+		return x;
+	}
 }

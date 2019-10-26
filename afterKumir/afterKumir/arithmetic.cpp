@@ -37,39 +37,6 @@ namespace arithmetic
 		}
 		return amount;
 	}
-
-	int square(int number)
-	{
-		int result = 0;
-		for (int i = 1; i <= number; i++)
-		{
-			result = i * i;
-		}
-		return result;
-	}
-
-	int square2(int x)
-	{
-		x *= x;
-		int y = x * x;
-		x *= x;
-		x *= x;
-		x += y;
-		return x;
-	}
-
-	int square3(int x)
-	{
-		int u = x;
-		x *= x;
-		int y = x + u;
-		x *= x;
-		x *= x;
-		x *= x;
-		x += y + u;
-		x += y;
-		return x;
-	}
 	
 	int sumDigitSquares(int number)
 	{

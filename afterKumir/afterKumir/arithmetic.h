@@ -9,7 +9,4 @@ namespace arithmetic
 
 	// *
 	int multiplicationOfDigit(int number);
-
-	//x ^ x
-	int square(int number);
 }

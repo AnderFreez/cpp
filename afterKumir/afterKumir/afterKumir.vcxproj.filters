@@ -38,6 +38,10 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="NTE.cpp">
+    <ClCompile Include="digits.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -61,6 +65,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="algorythm.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
@@ -92,6 +99,9 @@
       <Filter>hw</Filter>
     </Text>
     <Text Include="hw181019.txt">
+      <Filter>hw</Filter>
+    </Text>
+    <Text Include="hw251019.txt">
       <Filter>hw</Filter>
     </Text>
   </ItemGroup>
