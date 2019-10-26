@@ -37,6 +37,9 @@
     <ClCompile Include="algorythmCompare.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="NTE.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h">

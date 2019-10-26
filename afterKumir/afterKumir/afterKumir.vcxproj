@@ -131,6 +131,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiv.cpp" />
     <ClCompile Include="max.cpp" />
+    <ClCompile Include="NTE.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="Stepen.cpp" />
     <ClCompile Include="sum.cpp" />
