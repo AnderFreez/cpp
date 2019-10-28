@@ -14,7 +14,7 @@ namespace myMath
 	// max
 	int max(int a, int b, int c, int d);
 
-	double arithmeticMean(int number);
+	double arithmeticMeanOfDigit(int number);
 
 	//
 	int max(int* a, int size);

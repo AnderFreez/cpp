@@ -55,14 +55,14 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << 120 << " returned value: " << value << endl;
+				cout << "awaited value: " << 1024 << " returned value: " << value << endl;
 			}
 		}
 
 		void arithmeticMean()
 		{
 			cout << "arithmeticMean testing:" << endl;
-			int value = myMath::arithmeticMean(1111);
+			double value = myMath::arithmeticMeanOfDigit(1111);
 			if (value == 1)
 			{
 				cout << "test1 passed" << endl;
@@ -73,7 +73,7 @@ namespace test
 				cout << "awaited value: " << 1 << " returned value: " << value;
 			}
 
-			value = myMath::arithmeticMean(2222);
+			value = myMath::arithmeticMeanOfDigit(2222);
 			if (value == 2)
 			{
 				cout << "test2 passed" << endl;
@@ -81,7 +81,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 2 << " returned value: " << value << endl;
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value;
+				cout << "awaited value: " << 3249856 << " returned value: " << value;
 			}
 
 			value = myMath::inverted(2834956);
@@ -107,7 +107,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 6594382 << " returned value: " << value << endl;
 			}
 		}
 
@@ -174,7 +174,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value;
+				cout << "awaited value: " << 15 << " returned value: " << value;
 			}
 
 			value = myMath::sum(6);
@@ -185,7 +185,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 21 << " returned value: " << value << endl;
 			}
 		}
 
@@ -200,7 +200,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 25 << " returned value: " << value << endl;
 			}
 
 			value = myMath::sumOfOdd(11);
@@ -211,7 +211,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value;
+				cout << "awaited value: " << 36 << " returned value: " << value;
 			}
 		}
 
@@ -226,7 +226,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 6 << " returned value: " << value << endl;
 			}
 
 			value = myMath::sumOfEven(6);
@@ -237,7 +237,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 12 << " returned value: " << value << endl;
 			}
 		}
 
@@ -252,7 +252,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 3 << " returned value: " << value << endl;
 			}
 
 			value = myMath::signSum(6);
@@ -263,7 +263,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << -3 << " returned value: " << value << endl;
 			}
 		}
 
@@ -289,7 +289,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 5 << " returned value: " << value << endl;
 			}
 		}
 
@@ -304,7 +304,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 3 << " returned value: " << value << endl;
 			}
 
 			value = myMath::sumOfOddDigits(63);
@@ -315,7 +315,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 3 << " returned value: " << value << endl;
 			}
 		}
 
@@ -330,7 +330,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << -1 << " returned value: " << value << endl;
 			}
 
 			value = myMath::signSumOfDigits(436);
@@ -341,7 +341,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 7 << " returned value: " << value << endl;
 			}
 		}
 
@@ -356,7 +356,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 436 << " returned value: " << value << endl;
 			}
 
 			value = myMath::smartInverted(654);
@@ -367,7 +367,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 456 << " returned value: " << value << endl;
 			}
 		}
 
@@ -382,7 +382,7 @@ namespace test
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 0 << " returned value: " << value << endl;
 			}
 
 			value = myMath::task2(346);
@@ -393,7 +393,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 72 << " returned value: " << value << endl;
 			}
 		}
 
@@ -401,17 +401,17 @@ namespace test
 		{
 			cout << "sumSquaresOfOddDigits testing:" << endl;
 			int value = myMath::sumSquaresOfOddDigits(5);
-			if (value == 0)
+			if (value == 25)
 			{
 				cout << "test1 passed" << endl;
 			}
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 25 << " returned value: " << value << endl;
 			}
 
-			value = myMath::sumSquaresOfOddDigits(6);
+			value = myMath::sumSquaresOfOddDigits(46);
 			if (value == 0)
 			{
 				cout << "test2 passed" << endl;
@@ -419,7 +419,7 @@ namespace test
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 0 << " returned value: " << value << endl;
 			}
 		}
 
@@ -427,25 +427,25 @@ namespace test
 		{
 			cout << "sumFactorialOfEvenDigits testing:" << endl;
 			int value = myMath::sumFactorialOfEvenDigits(23);
-			if (value == 3)
+			if (value == 2)
 			{
 				cout << "test1 passed" << endl;
 			}
 			else
 			{
 				cout << "test1 failed" << endl;
-				cout << "awaited value: " << 1 << " returned value: " << value << endl;
+				cout << "awaited value: " << 2 << " returned value: " << value << endl;
 			}
 
 			value = myMath::sumFactorialOfEvenDigits(22);
-			if (value == 6)
+			if (value == 4)
 			{
 				cout << "test2 passed" << endl;
 			}
 			else
 			{
 				cout << "test2 failed" << endl;
-				cout << "awaited value: " << value << " returned value: " << value << endl;
+				cout << "awaited value: " << 4 << " returned value: " << value << endl;
 			}
 		}
 	}

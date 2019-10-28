@@ -12,6 +12,6 @@ using namespace std;
 
 int main()
 {
-	test::myMathTest::sumSquaresOfOddDigits();
+	cout << myMath::sumOfOdd(10);
 	return 0;
 }
