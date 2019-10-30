@@ -6,13 +6,32 @@ namespace integerNumbers
 	{
 		namespace sum
 		{
+			int sumOfDigit(int number);
 
+			int sumDigitSquares(int number);
+
+			int sumSquaresOfOddDigits(int number);
+
+			int sumFactorialOfEvenDigits(int number);
+
+			int sumOfOddDigits(int number);
+
+			int signSumOfDigits(int number);
 		}
 		// end of sum namespace
 
 		namespace mult
 		{
+			int multiplicationOfDigit(int number);
+		}
 
+		namespace amount
+		{
+			int amountOfDigit(int number);
+
+			int task1(int number);
+
+			int task2(int number);
 		}
 		// end of mult namespace
 	}
@@ -25,6 +44,8 @@ namespace integerNumbers
 		например: принимает 5, возвращает 1 * 2 * 3 * 4 * 5 = 120
 		*/
 		int factorial(int n);
+
+		int factorialSum(int n);
 	}
 	// end of factorial namespace
 

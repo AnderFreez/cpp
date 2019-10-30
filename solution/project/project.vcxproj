@@ -131,6 +131,7 @@
     <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="integerNumbers.cpp" />
     <ClCompile Include="divisibility.cpp" />
   </ItemGroup>
   <ItemGroup>

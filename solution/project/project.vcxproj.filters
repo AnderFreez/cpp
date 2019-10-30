@@ -38,6 +38,9 @@
     <ClCompile Include="divisibility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="integerNumbers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw281019.txt">
