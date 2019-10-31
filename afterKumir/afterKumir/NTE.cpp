@@ -3,16 +3,15 @@
 using namespace std;
 int NTE()
 {
-	int digits;
-	cin >> digits;
+	int n;
 	for (int i = 1; i < 10; i++)
 	{
-		if (i % 2 == 0)
+		cin >> n;
+		if (n % 2 == 0)
 		{
-			digits = i;
-			continue;
+			return n;
 		}
 	}
-	cout << digits;
-	return 0;
+
+	return -1;
 }
