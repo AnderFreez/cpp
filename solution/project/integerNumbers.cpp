@@ -186,4 +186,29 @@ namespace integerNumbers
 			return f;
 		}
 	}
+
+	namespace divisibility
+	{
+		int stupidGCD(int a, int b)
+		{
+			int m = 0;
+			if (a > b)
+			{
+				m = a;
+			}
+			else
+			{
+				m = b;
+			}
+			int d = 1;
+			for (int i = 0; i <= m; i++)
+			{
+				if (m % i == 0)
+				{
+					d = i; 
+				}
+			}
+			return d;
+		}
+	}
 }

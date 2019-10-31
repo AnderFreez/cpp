@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="integerNumbers.cpp" />
-    <ClCompile Include="divisibility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw281019.txt" />
