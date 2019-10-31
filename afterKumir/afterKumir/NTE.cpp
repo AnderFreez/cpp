@@ -1,7 +1,8 @@
 #include <iostream>
 
 using namespace std;
-int NTE()
+
+void NTE()
 {
 	int n;
 	for (int i = 1; i < 10; i++)
@@ -9,9 +10,11 @@ int NTE()
 		cin >> n;
 		if (n % 2 == 0)
 		{
-			return n;
+			cout << n;
+			return;
 		}
 	}
 
-	return -1;
+	cout << -1;
+	return;
 }
