@@ -52,6 +52,7 @@ namespace integerNumbers
 			*/
 			int multiplicationOfDigit(int number);
 		}
+		// end of mult namespace
 
 		namespace amount
 		{
@@ -60,12 +61,11 @@ namespace integerNumbers
 			например: 8183124 = 7
 			*/
 			int amountOfDigit(int number);
+		}
+		// end of mult namespace
 
-			/*
-				я не нашёл опредиления и придумать несмог
-			*/
-			int task1(int number);
-
+		namespace tasks
+		{
 			/*
 			принимает натуральное число
 			если количество цифр числа меньше суммы его цифр, возвращает произведение цифр числа
@@ -73,8 +73,14 @@ namespace integerNumbers
 			если количество цифр числа больше суммы его цифр, возвращает сумму нечётных цифр числа
 			*/
 			int task2(int number);
+
+			/*
+			принимает натуральное число
+			если количество цифр числа чётное, возвращает сумму квадратнов нечётных цифр
+			если количество цифр числа чётное, возвращает сумму факториалов чётных цифр
+			*/
+			int task1(int number);
 		}
-		// end of mult namespace
 	}
 	// end of digits namespace
 
@@ -92,6 +98,11 @@ namespace integerNumbers
 
 	namespace divisibility
 	{
+		/*
+		принимает три целых целых, проверяет является ли третье делителем первых двух
+		*/
+		bool isDivider(int a, int b, int d);
+
 		/*
 		глупый поиск НОДа
 		принимает два натуральных числа, возвращает их наибольший общий делитель

@@ -1,7 +1,9 @@
 #include "Limits.h"
 #include <iostream>
+#include "integerNumbers.h"
 
 using namespace std;
+
 namespace integerNumbers
 {
 	namespace digits
@@ -123,10 +125,13 @@ namespace integerNumbers
 				}
 				return amount;
 			}
+		}
 
+		namespace tasks
+		{
 			int task1(int number)
 			{
-				int amount = amountOfDigit(number);
+				int amount = amount::amountOfDigit(number);
 				int sumFac = digits::sum::sumFactorialOfEvenDigits(number);
 				int sumSqua = digits::sum::sumSquaresOfOddDigits(number);
 
@@ -139,11 +144,13 @@ namespace integerNumbers
 				{
 					return sumFac;
 				}
+
+				return 0;
 			}
 
 			int task2(int number)
 			{
-				int amount = amountOfDigit(number);
+				int amount = amount::amountOfDigit(number);
 				int sum = digits::sum::sumOfDigit(number);
 
 				if (amount == sum)
@@ -160,6 +167,8 @@ namespace integerNumbers
 				{
 					return digits::mult::multiplicationOfDigit(number);
 				}
+
+				return 0;
 			}
 		}
 	}
@@ -189,21 +198,17 @@ namespace integerNumbers
 
 	namespace divisibility
 	{
+		bool isDivider(int a, int b, int d)
+		{
+			return (a % d == 0) && (b % d == 0);
+		}
+
 		int stupidGCD(int a, int b)
 		{
-			int m = 0;
-			if (a > b)
-			{
-				m = a;
-			}
-			else
-			{
-				m = b;
-			}
 			int d = 1;
-			for (int i = 0; i <= m; i++)
+			for (int i = 0; i <= a; i++)
 			{
-				if (m % i == 0)
+				if (isDivider(a, b, i))
 				{
 					d = i; 
 				}
