@@ -1,4 +1,9 @@
-#pragma once
+#include "test.h"
+#include <iostream>
+#include "integerNumbers.h"
+#include "myMath.h"
+
+using namespace std;
 
 namespace test
 {
@@ -6,11 +11,20 @@ namespace test
 	{
 		namespace divisibility
 		{
-			void isDivider();
+			void isDivider()
+			{
+				
+			}
 
-			void stupidGCD();
+			void stupidGCD()
+			{
 
-			void euclid();
+			}
+
+			void euclid()
+			{
+
+			}
 		}
 	}
 	// end of integerNumbersTest namespace

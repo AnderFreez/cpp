@@ -1,4 +1,4 @@
-#pragma once
+#include "myMath.h"
 
 namespace myMath
 {
@@ -13,12 +13,32 @@ namespace myMath
 		/*
 		принимает два целых числа, возвращает максимальное из них
 		*/
-		int max(int a, int b);
+		int max(int a, int b)
+		{
+			if (a > b)
+			{
+				return a;
+			}
+			else
+			{
+				return b;
+			}
+		}
 
 		/*
 		принимает два целых числа, возвращает минимальное из них
 		*/
-		int min(int a, int b);
+		int min(int a, int b)
+		{
+			if (a < b)
+			{
+				return a;
+			}
+			else
+			{
+				return b;
+			}
+		}
 	}
 	// end of extremum namespace
 }

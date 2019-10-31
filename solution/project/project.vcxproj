@@ -131,11 +131,15 @@
     <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="algorithmCompare.cpp" />
     <ClCompile Include="integerNumbers.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myMath.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw281019.txt" />
+    <Text Include="hw311019.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

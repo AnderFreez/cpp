@@ -2,7 +2,7 @@
 
 namespace myArray
 {
-	namespace task
+	namespace tasks
 	{
 
 	}

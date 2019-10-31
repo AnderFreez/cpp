@@ -1,6 +1,7 @@
 #include "Limits.h"
 #include <iostream>
 #include "integerNumbers.h"
+#include "myMath.h"
 
 using namespace std;
 
@@ -206,7 +207,7 @@ namespace integerNumbers
 		int stupidGCD(int a, int b)
 		{
 			int d = 1;
-			for (int i = 0; i <= a; i++)
+			for (int i = 2; i <= a; i++)
 			{
 				if (isDivider(a, b, i))
 				{
@@ -214,6 +215,21 @@ namespace integerNumbers
 				}
 			}
 			return d;
+		}
+
+		int euclid(int a, int b)
+		{
+			a = myMath::extremum::max(a, b);
+			b = myMath::extremum::min(a, b);
+
+			while (b != 0)
+			{
+				int temp = a;
+				a = b;
+				b = temp % b;
+			}
+
+			return a;
 		}
 	}
 }
