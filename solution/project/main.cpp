@@ -1,7 +1,11 @@
 #include "algorithmCompare.h"
+#include "oge.h"
+#include <iostream>
+
+using namespace std;
 
 int main()
 {
-	algorithmCompare::GCD();
+	
 	return 0;
 }

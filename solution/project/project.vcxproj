@@ -127,6 +127,7 @@
     <ClInclude Include="integerNumbers.h" />
     <ClInclude Include="myArray.h" />
     <ClInclude Include="myMath.h" />
+    <ClInclude Include="oge.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="test.h" />
   </ItemGroup>
@@ -135,9 +136,11 @@
     <ClCompile Include="integerNumbers.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myMath.cpp" />
+    <ClCompile Include="oge.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="hw041119.txt" />
     <Text Include="hw281019.txt" />
     <Text Include="hw311019.txt" />
   </ItemGroup>

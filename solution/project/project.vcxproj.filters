@@ -33,6 +33,9 @@
     <ClInclude Include="algorithmCompare.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="oge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="integerNumbers.cpp">
@@ -50,12 +53,18 @@
     <ClCompile Include="algorithmCompare.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="oge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw281019.txt">
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="hw311019.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="hw041119.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
