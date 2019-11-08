@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw041119.txt" />
+    <Text Include="hw081119.txt" />
     <Text Include="hw281019.txt" />
     <Text Include="hw311019.txt" />
   </ItemGroup>
