@@ -2,6 +2,8 @@
 
 namespace myArray
 {
+	void arrayIn(int* a, int size);
+
 	namespace tasks
 	{
 

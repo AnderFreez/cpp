@@ -31,4 +31,12 @@ namespace oge
 	void task661();
 
 	void task721();
+
+	void task521();
+
+	void task541();
+
+	void task1071();
+
+	void task1253();
 }

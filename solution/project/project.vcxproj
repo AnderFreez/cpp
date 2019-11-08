@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="algorithmCompare.h" />
+    <ClInclude Include="ege.h" />
     <ClInclude Include="integerNumbers.h" />
     <ClInclude Include="myArray.h" />
     <ClInclude Include="myMath.h" />
@@ -133,8 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithmCompare.cpp" />
+    <ClCompile Include="ege.cpp" />
     <ClCompile Include="integerNumbers.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myArray.cpp" />
     <ClCompile Include="myMath.cpp" />
     <ClCompile Include="oge.cpp" />
     <ClCompile Include="test.cpp" />

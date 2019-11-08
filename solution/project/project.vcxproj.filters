@@ -36,6 +36,9 @@
     <ClInclude Include="oge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ege.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="integerNumbers.cpp">
@@ -54,6 +57,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="oge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ege.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
