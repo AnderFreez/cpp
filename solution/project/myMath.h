@@ -2,9 +2,15 @@
 
 namespace myMath
 {
+	namespace inverted
+	{
+		int smartInverted(int number);
+
+		int inverted(int number);
+	}
 	namespace degree
 	{
-
+		int degree(int a, int b);
 	}
 	// end of degree namespace
 

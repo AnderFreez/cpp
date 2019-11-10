@@ -65,6 +65,9 @@
     <ClCompile Include="myArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="hw281019.txt">

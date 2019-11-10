@@ -140,6 +140,7 @@
     <ClCompile Include="myArray.cpp" />
     <ClCompile Include="myMath.cpp" />
     <ClCompile Include="oge.cpp" />
+    <ClCompile Include="sort.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>

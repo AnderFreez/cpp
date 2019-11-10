@@ -11,6 +11,16 @@ namespace integerNumbers
 	{
 		namespace sum
 		{
+			int sumOfSquares(int n)
+			{
+				int sum = 0;
+				for (int i = 0; i <= n; i++)
+				{
+					sum += i * i;
+				}
+				return sum;
+			}
+
 			// +
 			int sumOfDigit(int number)
 			{
@@ -97,6 +107,54 @@ namespace integerNumbers
 				}
 				return sum;
 			}
+
+			int signSum(int n)
+			{
+				int sign = 1;
+				int sum = 0;
+				for (int i = 1; i <= n; i++)
+				{
+					sum += sign * i;
+					sign *= -1;
+				}
+				return sum;
+			}
+
+			int sumOfEven(int n)
+			{
+				int sum = 0;
+				for (int i = 1; i <= n; i++)
+				{
+					if (i % 2 == 0)
+					{
+						sum += i;
+					}
+				}
+				return sum;
+			}
+
+			int sumOfOdd(int n)
+			{
+				int sum = 0;
+				for (int i = 1; i <= n; i++)
+				{
+					if (i % 2 != 0)
+					{
+						sum += i;
+					}
+				}
+				return sum;
+			}
+
+			int sum(int n)
+			{
+				int sum = 0;
+				for (int i = 1; i <= n; i++)
+				{
+					sum += i;
+				}
+				return sum;
+			}
 		}
 
 		namespace mult
@@ -138,7 +196,7 @@ namespace integerNumbers
 
 				if (amount % 2 == 0)
 				{
-					return sumSqua;
+					return sumSqua;	
 				}
 
 				if (amount % 2 == 1)
@@ -195,8 +253,22 @@ namespace integerNumbers
 			}
 			return f;
 		}
+
+		int smartFactorialSum(int n)
+		{
+			int f = 1;
+
+			for (int i = n; i >= 2; --i)
+			{
+				f = 1 + i * f;
+			}
+
+			return f;
+		}
 	}
 
+	
+	
 	namespace divisibility
 	{
 		bool isDivider(int a, int b, int d)
@@ -230,6 +302,12 @@ namespace integerNumbers
 			}
 
 			return a;
+		}
+
+		double arithmeticMeanOfDigit(int number)
+		{
+			double sum = digits::sum::sumOfDigit(number);
+			return  sum / digits::amount::amountOfDigit(number);
 		}
 	}
 }

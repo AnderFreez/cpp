@@ -3,7 +3,7 @@
 
 namespace myMath
 {
-	int myMath::factorial(int n)
+	int factorial(int n)
 	{
 		assert(n >= 1);
 		int f = 1;

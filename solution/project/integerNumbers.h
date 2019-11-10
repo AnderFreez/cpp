@@ -6,6 +6,16 @@ namespace integerNumbers
 	{
 		namespace sum
 		{
+			int sumOfSquares(int n);
+
+			int signSum(int n);
+
+			int sumOfEven(int n);
+
+			int sumOfOdd(int n);
+
+			int sum(int n);
+			
 			/*
 			принимает число возвращает сумму цифр числа
 			например: 2222 = 2 + 2 + 2 + 2 = 8
@@ -86,6 +96,8 @@ namespace integerNumbers
 
 	namespace factorial
 	{
+		int smartFactorialSum(int n);
+
 		/*
 		принимает натуральное число n, возвращает n! = 1 * 2 * 3 * .... * (n - 1) * n
 		например: принимает 5, возвращает 1 * 2 * 3 * 4 * 5 = 120
@@ -116,6 +128,8 @@ namespace integerNumbers
 		например: принимает 72 и 81, возвращает 9
 		*/
 		int euclid(int a, int b);
+		double arithmeticMeanOfDigit(int number);
+
 	}
 	// end of divisibility namespace
 }
