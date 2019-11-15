@@ -33,6 +33,78 @@ namespace ege
 				cout << amount;
 			}
 		}
+
+		void task7770()
+		{
+			int const n = 40;
+			int a[n];
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+				int sum = a[i] + a[i - 1];
+				int mult = a[i] * a[i - 1];
+				if (sum % 7 == 0 && mult > 0)
+				{
+					++amount;
+				}
+			}
+
+			if (amount == 0)
+			{
+				cout << "No pairs";
+			}
+			else
+			{
+				cout << amount;
+			}
+		}
+
+		void task6936()
+		{
+			int const n = 2014;
+			double a[n];
+			double max = 0;
+			int index = 0;
+			
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+				double subtruct = abs(a[i] - a[i - 1]);
+				if (subtruct > max)
+				{
+					max = subtruct;
+					index = i;
+				}
+			}
+			cout << a[index] << " " << a[index + 1];
+		}
+
+		void task11361()
+		{
+			int const n = 40;
+			int a[n];
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n;i++)
+			{
+				if (a[i] % 10 == 2 || a[i - 1] % 10 == 2)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+
 	}
 	// end of namespace ege251
 

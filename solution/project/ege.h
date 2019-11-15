@@ -5,6 +5,12 @@ namespace ege
 	namespace ege251
 	{
 		void task7682();
+
+		void task7770();
+
+		void task6936();
+
+		void task11361();
 	}
 	// end of namespace ege251
 
