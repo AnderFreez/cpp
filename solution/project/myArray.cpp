@@ -7,36 +7,8 @@ using namespace std;
 
 namespace myArray
 {
-	namespace array
+	namespace InOut
 	{
-		namespace maxMinArray
-		{
-			int max(int* a, int size)
-			{
-				int result = INT_MIN;
-				for (int i = 0; i < size; i++)
-				{
-					if (a[i] > result)
-					{
-						result = a[i];
-					}
-				}
-				return result;
-			}
-
-			int min(int* a, int size)
-			{
-				int result = INT_MAX;
-				for (int i = 0; i < size; i++)
-				{
-					if (a[i] < result)
-					{
-						result = a[i];
-					}
-				}
-				return result;
-			}
-		}
 		// input array
 		void arrayIn(int* a, int size)
 		{
@@ -66,7 +38,37 @@ namespace myArray
 			}
 		}
 	}
-	// end of array namespace
+	// end of InOut namespace
+
+	namespace maxMinArray
+	{
+		int max(int* a, int size)
+		{
+			int result = INT_MIN;
+			for (int i = 0; i < size; i++)
+			{
+				if (a[i] > result)
+				{
+					result = a[i];
+				}
+			}
+			return result;
+		}
+
+		int min(int* a, int size)
+		{
+			int result = INT_MAX;
+			for (int i = 0; i < size; i++)
+			{
+				if (a[i] < result)
+				{
+					result = a[i];
+				}
+			}
+			return result;
+		}
+	}
+	// end of maxMinArray namespace
 
 	namespace tasks
 	{
@@ -203,7 +205,7 @@ namespace myArray
 				}
 			}
 
-#pragma region return values
+			#pragma region return values
 
 			if (evenAmount == oddAmount)
 			{
@@ -217,7 +219,10 @@ namespace myArray
 			{
 				return maxOdd;
 			}
-#pragma endregion
+
+			#pragma endregion
+
+			return 0;
 		}
 
 		/*
@@ -409,7 +414,7 @@ namespace myArray
 			}
 			if (result == INT_MIN)
 			{
-				cout << "нет чисел сумма цифр которых равна 10";// исправить
+				return -1;
 			}
 			else
 			{
@@ -533,6 +538,8 @@ namespace myArray
 			{
 				return task16(a, size);
 			}
+
+			return 0;
 		}
 	}
 	// end of tasks namespace

@@ -71,7 +71,7 @@ namespace integerNumbers
 					int digit = number % 10;
 					if (digit % 2 == 0)
 					{
-						sum += factorial::factorialSum(digit);
+						sum += myMath::factorial::factorial(digit);
 					}
 					number /= 10;
 				}
@@ -156,6 +156,7 @@ namespace integerNumbers
 				return sum;
 			}
 		}
+		// end of sum namespace
 
 		namespace mult
 		{
@@ -171,6 +172,7 @@ namespace integerNumbers
 				return mult;
 			}
 		}
+		// end of mult namespace
 
 		namespace amount
 		{
@@ -185,6 +187,37 @@ namespace integerNumbers
 				return amount;
 			}
 		}
+		// end of amount namespace
+
+		namespace inverted
+		{
+			int smartInverted(int number)
+			{
+				int result = 0;
+				while (number != 0)
+				{
+					int digit = number % 10;
+					result = 10 * result + digit;
+					number /= 10;
+				}
+				return result;
+			}
+
+			int inverted(int number)
+			{
+				int n = integerNumbers::digits::amount::amountOfDigit(number) - 1;
+				int result = 0;
+				while (number != 0)
+				{
+					int digit = number % 10;
+					result += digit * myMath::degree::degree(10, n);
+					number /= 10;
+					--n;
+				}
+				return result;
+			}
+		}
+		// end of inverted namespace
 
 		namespace tasks
 		{
@@ -230,43 +263,8 @@ namespace integerNumbers
 				return 0;
 			}
 		}
+		// end of tasks namespace
 	}
-
-	namespace factorial
-	{
-		int factorialSum(int n)
-		{
-			int s = 0;
-			for (int i = 1; i <= n; i++)
-			{
-				s += factorial(i);
-			}
-			return s;
-		}
-
-		int factorial(int n)
-		{
-			int f = 1;
-			for (int i = 2; i <= n; ++i)
-			{
-				f *= i;
-			}
-			return f;
-		}
-
-		int smartFactorialSum(int n)
-		{
-			int f = 1;
-
-			for (int i = n; i >= 2; --i)
-			{
-				f = 1 + i * f;
-			}
-
-			return f;
-		}
-	}
-
 	
 	
 	namespace divisibility

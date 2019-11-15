@@ -2,12 +2,19 @@
 
 namespace myMath
 {
-	namespace inverted
+	namespace factorial
 	{
-		int smartInverted(int number);
+		int smartFactorialSum(int n);
 
-		int inverted(int number);
+		/*
+		принимает натуральное число n, возвращает n! = 1 * 2 * 3 * .... * (n - 1) * n
+		например: принимает 5, возвращает 1 * 2 * 3 * 4 * 5 = 120
+		*/
+		int factorial(int n);
+
+		int factorialSum(int n);
 	}
+	// end of factorial namespace
 	namespace degree
 	{
 		int degree(int a, int b);

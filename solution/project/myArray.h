@@ -2,7 +2,7 @@
 
 namespace myArray
 {
-	namespace array
+	namespace InOut
 	{
 		// input array
 		void arrayIn(int* a, int size);
@@ -15,6 +15,14 @@ namespace myArray
 	}
 	// end of array namespace
 	
+	namespace maxMinArray
+	{
+		int max(int* a, int size);
+
+		int min(int* a, int size);
+	}
+	// end of maxMinArray namespace
+
 	namespace tasks
 	{
 		/*
@@ -123,6 +131,6 @@ namespace myArray
 		double task18(int* a, int size);
 
 	}
-	// end of task namespace
+	// end of tasks namespace
 }
 // end of myArray namespace

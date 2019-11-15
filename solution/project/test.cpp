@@ -34,7 +34,7 @@ namespace test
 		void factorial()
 		{
 			cout << "factorial testing:" << endl;
-			int value = integerNumbers::factorial::factorial(1);
+			int value = myMath::factorial::factorial(1);
 			if (value == 1)
 			{
 				cout << "test1 passed" << endl;
@@ -45,7 +45,7 @@ namespace test
 				cout << "awaited value: " << 1 << " returned value: " << value;
 			}
 
-			value = integerNumbers::factorial::factorial(5);
+			value = myMath::factorial::factorial(5);
 			if (value == 120)
 			{
 				cout << "test2 passed" << endl;
@@ -112,7 +112,7 @@ namespace test
 		void inverted()
 		{
 			cout << "inverted testing:" << endl;
-			int value = myMath::inverted::inverted(6589423);
+			int value = integerNumbers::digits::inverted::inverted(6589423);
 			if (value == 3249856)
 			{
 				cout << "test1 passed" << endl;
@@ -123,7 +123,7 @@ namespace test
 				cout << "awaited value: " << 3249856 << " returned value: " << value;
 			}
 
-			value = myMath::inverted::inverted(2834956);
+			value = integerNumbers::digits::inverted::inverted(2834956);
 			if (value == 6594382)
 			{
 				cout << "test2 passed" << endl;
@@ -138,7 +138,7 @@ namespace test
 		void factorialSum()
 		{
 			cout << "factorialSum testing:" << endl;
-			int value = integerNumbers::factorial::factorialSum(1111);
+			int value = myMath::factorial::factorialSum(1111);
 			if (value == -125961703)
 			{
 				cout << "test1 passed" << endl;
@@ -149,7 +149,7 @@ namespace test
 				cout << "awaited value: " << 1 << " returned value: " << value << endl;
 			}
 
-			value = integerNumbers::factorial::factorialSum(2222);
+			value = myMath::factorial::factorialSum(2222);
 			if (value == -125961703)
 			{
 				cout << "test2 passed" << endl;
@@ -164,7 +164,7 @@ namespace test
 		void smartFactorialSum()
 		{
 			cout << "smartFactorialSum testing:" << endl;
-			int value = integerNumbers::factorial::smartFactorialSum(1111);
+			int value = myMath::factorial::smartFactorialSum(1111);
 			if (value == -125961703)
 			{
 				cout << "test1 passed" << endl;
@@ -175,7 +175,7 @@ namespace test
 				cout << "awaited value: " << 1 << " returned value: " << value << endl;
 			}
 
-			value = integerNumbers::factorial::smartFactorialSum(2222);
+			value = myMath::factorial::smartFactorialSum(2222);
 			if (value == -125961703)
 			{
 				cout << "test2 passed" << endl;
@@ -305,7 +305,7 @@ namespace test
 				cout << "awaited value: " << 1 << " returned value: " << value << endl;
 			}
 
-			int value = integerNumbers::digits::sum::sumOfSquares(2);
+			value = integerNumbers::digits::sum::sumOfSquares(2);
 			if (value == 5)
 			{
 				cout << "test2 passed" << endl;
@@ -372,7 +372,7 @@ namespace test
 		void smartInverted()
 		{
 			cout << "smartInverted testing:" << endl;
-			int value = myMath::inverted::smartInverted(634);
+			int value = integerNumbers::digits::inverted::smartInverted(634);
 			if (value == 436)
 			{
 				cout << "test1 passed" << endl;
@@ -383,7 +383,7 @@ namespace test
 				cout << "awaited value: " << 436 << " returned value: " << value << endl;
 			}
 
-			value = myMath::inverted::smartInverted(654);
+			value = integerNumbers::digits::inverted::smartInverted(654);
 			if (value == 456)
 			{
 				cout << "test2 passed" << endl;

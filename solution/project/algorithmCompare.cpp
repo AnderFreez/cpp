@@ -36,7 +36,7 @@ namespace algorithmCompare
 		int startTime1 = clock();
 		for (int i = 0; i < 1000000; i++)
 		{
-			myMath::inverted::inverted(123456789);
+			integerNumbers::digits::inverted::inverted(123456789);
 		}
 		int endTime1 = clock();
 		int time1 = endTime1 - startTime1;
@@ -44,7 +44,7 @@ namespace algorithmCompare
 		int startTime2 = clock();
 		for (int i = 0; i < 1000000; i++)
 		{
-			myMath::inverted::smartInverted(123456789);
+			integerNumbers::digits::inverted::smartInverted(123456789);
 		}
 		int endTime2 = clock();
 		int time2 = endTime2 - startTime2;
@@ -57,7 +57,7 @@ namespace algorithmCompare
 		int startTime1 = clock();
 		for (int i = 0; i < 1000000; i++)
 		{
-			integerNumbers::factorial::factorialSum(10);
+			myMath::factorial::factorialSum(10);
 		}
 		int endTime1 = clock();
 		int time1 = endTime1 - startTime1;
@@ -65,7 +65,7 @@ namespace algorithmCompare
 		int startTime2 = clock();
 		for (int i = 0; i < 1000000; i++)
 		{
-			integerNumbers::factorial::smartFactorialSum(10);
+			myMath::factorial::smartFactorialSum(10);
 		}
 		int endTime2 = clock();
 		int time2 = endTime2 - startTime2;

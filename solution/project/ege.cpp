@@ -12,7 +12,7 @@ namespace ege
 		{
 			int const n = 5;
 			int a[n];
-			myArray::arrayIn(a, n);
+			myArray::InOut::arrayIn(a, n);
 			int amount = 0;
 
 			for (int i = 0; i < n - 1; i++)
