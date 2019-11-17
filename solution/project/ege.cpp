@@ -105,6 +105,108 @@ namespace ege
 			cout << amount;
 		}
 
+		void task7797()
+		{
+			int const n = 40;
+			int a[n];
+			int amount = 0;
+			int sum = 0;
+			for (int i = 1; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+				sum = a[i] + a[i - 1];
+				if (sum % 6 == 1 && a[i] * a[i - 1] < 1000)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+
+		void task8113()
+		{
+			int const n = 20;
+			int a[n];
+			int amount = 0;
+			for  (int i = 1; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+				
+				if (a[i] % 3 == 0 && a[i - 1] % 3 == 0)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+
+		void task8673()
+		{
+			int const n = 40;
+			int a[n];
+			int amount = 0;
+			int sum = 0;
+			for (int i = 1; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+				sum = a[i] + a[i - 1];
+				if (sum % 2 == 0 && a[i] * a[i - 1] > 100)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+
+		void task9376()
+		{
+			int const n = 20;
+			int a[n];
+			int amount = 0;
+			for (int i = 1; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+
+				if (a[i] % 3 == 0 || a[i - 1] % 3 == 0)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+
+		void task()
+		{
+			int const n = 30;
+			int a[n];
+			int amount = 0;
+			for (int i = 1; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; i++)
+			{
+
+				if (a[i] % 13 == 0 || a[i - 1] % 13 == 0)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+		}
 	}
 	// end of namespace ege251
 
