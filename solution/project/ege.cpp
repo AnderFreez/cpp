@@ -187,7 +187,7 @@ namespace ege
 			cout << amount;
 		}
 
-		void task()
+		void task10488()
 		{
 			int const n = 30;
 			int a[n];
