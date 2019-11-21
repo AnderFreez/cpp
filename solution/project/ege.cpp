@@ -328,6 +328,116 @@ namespace ege
 			}
 			cout << sum / n;
 		}
+
+		void task3790()
+		{
+			int const n = 30;
+			int a[n];
+			double arithmeticMean = 0;
+			double sum = 0;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 2 != 0)
+				{
+					sum = a[i];
+					++amount;
+				}
+			}
+			cout << sum / amount;
+		}
+
+		void task7214()
+		{
+			int const n = 30;
+			int a[n];
+			double arithmeticMean = 0;
+			double sum = 0;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 0)
+				{
+					sum = a[i];
+					++amount;
+				}
+			}
+			cout << sum / amount;
+		}
+
+		void task7383()
+		{
+			int const n = 30;
+			int a[n];
+			double arithmeticMean = 0;
+			double sum = 0;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] == 4 || a[i]== 5)
+				{
+					sum = a[i];
+					++amount;
+				}
+			}
+			cout << sum / amount;
+		}
+
+		void task7418()
+		{
+			int const n = 30;
+			int a[n];
+			double arithmeticMean = 0;
+			double sum = 0;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 180)
+				{
+					sum = a[i];
+					++amount;
+				}
+			}
+			cout << sum / amount;
+		}
+
+		void task7422()
+		{
+			int const n = 30;
+			int a[n];
+			double arithmeticMean = 0;
+			double sum = 0;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 50)
+				{
+					sum = a[i];
+					++amount;
+				}
+			}
+			cout << sum / amount;
+		}
 	}
 	// end of namespace ege252
 
