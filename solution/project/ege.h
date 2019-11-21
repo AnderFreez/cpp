@@ -17,7 +17,7 @@ namespace ege
 		void task8113();
 
 		void task8673();
-		
+
 		void task9376();
 
 		void task10488();
@@ -26,7 +26,13 @@ namespace ege
 
 	namespace ege252
 	{
+		void task9209();
 
+		void task9811();
+
+		void task2914();
+
+		void task2901();
 	}
 	// end of namespace ege252
 

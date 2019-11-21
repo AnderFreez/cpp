@@ -69,17 +69,17 @@ namespace ege
 			double a[n];
 			double max = 0;
 			int index = 0;
-			
+
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 1; i < n; i++)
 			{
-				double subtruct = abs(a[i] - a[i - 1]);
-				if (subtruct > max)
+				double subtract = abs(a[i] - a[i - 1]);
+				if (subtract > max)
 				{
-					max = subtruct;
+					max = subtract;
 					index = i;
 				}
 			}
@@ -95,7 +95,7 @@ namespace ege
 			{
 				cin >> a[i];
 			}
-			for (int i = 1; i < n;i++)
+			for (int i = 1; i < n; i++)
 			{
 				if (a[i] % 10 == 2 || a[i - 1] % 10 == 2)
 				{
@@ -110,15 +110,15 @@ namespace ege
 			int const n = 40;
 			int a[n];
 			int amount = 0;
-			int sum = 0;
 			for (int i = 1; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 1; i < n; i++)
 			{
-				sum = a[i] + a[i - 1];
-				if (sum % 6 == 1 && a[i] * a[i - 1] < 1000)
+				int sum = a[i] + a[i - 1];
+				int mult = a[i] * a[i - 1];
+				if (sum % 6 != 0 && mult < 1000)
 				{
 					++amount;
 				}
@@ -131,13 +131,12 @@ namespace ege
 			int const n = 20;
 			int a[n];
 			int amount = 0;
-			for  (int i = 1; i < n; i++)
+			for (int i = 1; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 1; i < n; i++)
 			{
-				
 				if (a[i] % 3 == 0 && a[i - 1] % 3 == 0)
 				{
 					++amount;
@@ -151,15 +150,15 @@ namespace ege
 			int const n = 40;
 			int a[n];
 			int amount = 0;
-			int sum = 0;
 			for (int i = 1; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 1; i < n; i++)
 			{
-				sum = a[i] + a[i - 1];
-				if (sum % 2 == 0 && a[i] * a[i - 1] > 100)
+				int sum = a[i] + a[i - 1];
+				int mult = a[i] * a[i - 1];
+				if (sum % 2 == 0 && mult > 100)
 				{
 					++amount;
 				}
@@ -206,13 +205,129 @@ namespace ege
 			}
 			cout << amount;
 		}
-		}
 	}
 	// end of namespace ege251
 
 	namespace ege252
 	{
+		void task9209()
+		{
+			int const n = 6;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
 
+			int sum = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				sum += a[i];
+			}
+
+			if (sum % 2 == 0)
+			{
+				int amountOfEven = 0;
+				for (int i = 0; i < n; i++)
+				{
+					if (a[i] % 2 == 0)
+					{
+						++amountOfEven;
+					}
+				}
+				cout << amountOfEven;
+			}
+			else
+			{
+				int amountOfOdd = 0;
+				for (int i = 0; i < n; i++)
+				{
+					if (a[i] % 2 == 1)
+					{
+						++amountOfOdd;
+					}
+				}
+				cout << amountOfOdd;
+			}
+		}
+
+		void task9811()
+		{
+			int const n = 6;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+
+			int min = INT_MAX;
+			for (int i = 1; i < n - 1; ++i)
+			{
+				if (a[i] < a[i - 1] && a[i] < a[i + 1] && a[i] < min)
+				{
+					min = a[i];
+				}
+			}
+
+			if (min == INT_MAX)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << min;
+			}
+		}
+
+		void task2914()
+		{
+			int const n = 30;
+			int a[n];
+			int max = INT_MIN;
+			int min = INT_MAX;
+			double arithmeticMeanOfMaxMin = 0;
+			double arithmeticMeanOfAll = 0;
+			double sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < min)
+				{
+					min = a[i];
+				}
+				if (a[i] > max)
+				{
+					max = a[i];
+				}
+				sum += a[i];
+			}
+			arithmeticMeanOfMaxMin = (max + min) / 2;
+			arithmeticMeanOfAll = sum / n;
+			cout << arithmeticMeanOfMaxMin - arithmeticMeanOfAll;
+		}
+
+		void task2901()
+		{
+			int const n = 30;
+			int a[n];
+			double arithmeticMean = 0;
+			double sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 2 == 1)
+				{
+					sum += a[i];
+				}
+			}
+			cout << sum / n;
+		}
 	}
 	// end of namespace ege252
 
