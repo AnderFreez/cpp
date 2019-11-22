@@ -315,18 +315,20 @@ namespace ege
 			int a[n];
 			double arithmeticMean = 0;
 			double sum = 0;
+			int amount = 0;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] % 2 == 1)
+				if (a[i] % 2 != 0)
 				{
 					sum += a[i];
+					++amount;
 				}
 			}
-			cout << sum / n;
+			cout << sum / amount;
 		}
 
 		void task3790()
@@ -344,7 +346,7 @@ namespace ege
 			{
 				if (a[i] % 2 != 0)
 				{
-					sum = a[i];
+					sum += a[i];
 					++amount;
 				}
 			}
@@ -366,7 +368,7 @@ namespace ege
 			{
 				if (a[i] < 0)
 				{
-					sum = a[i];
+					sum += a[i];
 					++amount;
 				}
 			}
@@ -388,7 +390,7 @@ namespace ege
 			{
 				if (a[i] == 4 || a[i]== 5)
 				{
-					sum = a[i];
+					sum += a[i];
 					++amount;
 				}
 			}
@@ -410,7 +412,7 @@ namespace ege
 			{
 				if (a[i] >= 180)
 				{
-					sum = a[i];
+					sum += a[i];
 					++amount;
 				}
 			}
@@ -432,7 +434,7 @@ namespace ege
 			{
 				if (a[i] >= 50)
 				{
-					sum = a[i];
+					sum += a[i];
 					++amount;
 				}
 			}
