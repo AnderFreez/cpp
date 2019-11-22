@@ -440,12 +440,136 @@ namespace ege
 			}
 			cout << sum / amount;
 		}
+
+		void task10301()
+		{
+			int const n = 2016;
+			int a[n];
+
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+
+			int amount = 0;
+			for (int i = 0; i < n-2; ++i)
+			{
+				if (a[i] == 0.5 * (a[i + 1] + a[i + 2]))
+				{
+					++amount;
+				}
+			}
+
+			cout << amount;
+		}
+
+		void task10399()
+		{
+			int const n = 2016;
+			int a[n];
+
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+
+			int max = INT_MIN;
+			for (int i = 0; i < n; ++i)
+			{
+				if (a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+
+			int sum = 0;
+			int chetnost = max % 2;
+			for (int i = 0; i < n; ++i)
+			{
+				if (a[i] % 2 == chetnost)
+				{
+					sum += a[i];
+				}
+			}
+
+			cout << sum;
+		}
+
+		void task13636()
+		{
+			int const n = 2017;
+			int a[n];
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 16 >= 10 && a[i] % 16 <= 15 && a[i] >= 256 && a[i] < 4096)
+				{
+					sum += a[i];
+				}
+			}
+			cout << sum;
+		}
+
+		void task15865()
+		{
+			int const n = 30;
+			int a[n];
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 200 && a[i] % 5 == 0)
+				{
+					sum += a[i];
+				}
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 200 && a[i] % 5 == 0)
+				{
+					a[i] = sum;
+				}
+			}
+			for (int i = 0; i < n; i++)
+			{
+				cout << a[i] << " ";
+			}
+		}
 	}
 	// end of namespace ege252
 
 	namespace ege253
 	{
-
+		void task2907()
+		{
+			int const n = 30;
+			int a[n];
+			int maxEven = INT_MIN;
+			int maxOdd = INT_MIN;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 2 == 0 && a[i] > maxEven)
+				{
+					maxEven = a[i];
+				}
+				if (a[i] % 2 != 0 && a[i] > maxOdd)
+				{
+					maxOdd = a[i];
+				}
+			}
+			cout << maxEven - maxOdd;
+		}
 	}
 	// end of namespace ege253
 
