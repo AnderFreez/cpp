@@ -570,6 +570,240 @@ namespace ege
 			}
 			cout << maxEven - maxOdd;
 		}
+
+		void task9660()
+		{
+			int const n = 40;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 10 && a[i] <= 99 && a[i] % 3 != 0)
+				{
+					max = a[i];
+				}
+			}
+			if (max == INT_MIN)
+			{
+				cout << "не найдено";
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task9775()
+		{			
+			int const n = 2015;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int max = INT_MIN;
+			for (int i = 1; i < n - 1; ++i)
+			{
+				if (a[i] > a[i - 1] && a[i] > a[i + 1] && a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			if (max == INT_MIN)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task2919()
+		{
+			int const n = 30;
+			int a[n];
+			int index = 0;
+			int max = INT_MIN;
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > max)
+				{
+					max = a[i];
+					index = i;
+				}
+			}
+			cout << index;
+		}
+
+		void task2905()
+		{
+			int const n = 30;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 0 && a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			cout << max;
+		}
+
+		void task2937()
+		{
+			int const n = 23;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] <= 1800 && a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			cout << max;
+		}
+
+		void task2938()
+		{
+			int const n = 23;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] <= 1800 && a[i] > 1600 && a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			cout << max;
+		}
+
+		void task5501()
+		{
+			int const n = 20;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 5 == 0)
+				{
+					max = a[i];
+				}
+			}
+			if (max == INT_MIN)
+			{
+				cout << "не найдено";
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task5725()
+		{
+			int const n = 40;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 7 != 0)
+				{
+					max = a[i];
+				}
+			}
+			if (max == INT_MIN)
+			{
+				cout << "не найдено";
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task5789()
+		{
+			int const n = 40;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 9 != 0)
+				{
+					max = a[i];
+				}
+			}
+			if (max == INT_MIN)
+			{
+				cout << "не найдено";
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task()
+		{
+			int const n = 40;
+			int a[n];
+			int max = INT_MIN;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 2 == 0)
+				{
+					max = a[i];
+				}
+			}
+			if (max == INT_MIN)
+			{
+				cout << "не найдено";
+			}
+			else
+			{
+				cout << max;
+			}
+		}
 	}
 	// end of namespace ege253
 

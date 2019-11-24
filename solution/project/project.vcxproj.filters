@@ -82,5 +82,8 @@
     <Text Include="hw081119.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="incomprehensible tasks.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
