@@ -860,12 +860,187 @@ namespace ege
 
 			cout << minIndex;
 		}
+
+		void task13421()
+		{
+			int const n = 2017;
+			int a[n];
+			int max = INT_MIN;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 8 == 4 && a[i] >= 512 && a[i] > max)
+				{
+					max = a[i];
+					++amount;
+				}
+			}
+			if (amount == 0)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task13474()
+		{
+			int const n = 2017;
+			int a[n];
+			int max = INT_MIN;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 16 == 3 && a[i] >= 256 && a[i] > max)
+				{
+					max = a[i];
+					++amount;
+				}
+			}
+			if (amount == 0)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task13501()
+		{
+			int const n = 2016;
+			int a[n];
+			int max = INT_MIN;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 16 == 4 && a[i] <= 256 && a[i] >= 16 && a[i] > max)
+				{
+					max = a[i];
+					++amount;
+				}
+			}
+			if (amount == 0)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task13555()
+		{
+			int const n = 2017;
+			int a[n];
+			int max = INT_MIN;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 16 == 11 && a[i] > max)
+				{
+					max = a[i];
+					++amount;
+				}
+			}
+			if (amount == 0)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task13582()
+		{
+			int const n = 2016;
+			int a[n];
+			int max = INT_MIN;
+			int amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 16 == 14 && a[i] > max)
+				{
+					max = a[i];
+					++amount;
+				}
+			}
+			if (amount == 0)
+			{
+				cout << 0;
+			}
+			else
+			{
+				cout << max;
+			}
+		}
 	}
 	// end of namespace ege253
 
 	namespace ege254
 	{
+		void task2903()
+		{
+			int const n = 2016;
+			int a[n];
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				a[i] = abs(a[i]);
+			}
+			for (int i = 0; i < n; i++)
+			{
+				cout << a[i] << " ";
+			}
+		}
 
+		void task2917()
+		{
+			int const n = 2016;
+			int a[n];
+			int mult = 1;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 0)
+				{
+					mult *= a[i];
+				}
+			}
+			cout << mult;
+		}
 	}
 	// end of namespace ege254
 
