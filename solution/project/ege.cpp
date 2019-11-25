@@ -582,7 +582,7 @@ namespace ege
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] >= 10 && a[i] <= 99 && a[i] % 3 != 0)
+				if (a[i] >= 10 && a[i] <= 99 && a[i] % 3 != 0 && a[i] > max)
 				{
 					max = a[i];
 				}
@@ -627,7 +627,6 @@ namespace ege
 		{
 			int const n = 30;
 			int a[n];
-			int index = 0;
 			int max = INT_MIN;
 			for (int i = 0; i < n; ++i)
 			{
@@ -638,10 +637,15 @@ namespace ege
 				if (a[i] > max)
 				{
 					max = a[i];
-					index = i;
 				}
 			}
-			cout << index;
+			for (int i = 0; i < n; ++i)
+			{
+				if (a[i] == max)
+				{
+					cout << i << " ";
+				}
+			}
 		}
 
 		void task2905()
@@ -712,7 +716,7 @@ namespace ege
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] >= 100 && a[i] <= 999 && a[i] % 5 == 0)
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 5 == 0 && a[i] > max)
 				{
 					max = a[i];
 				}
@@ -738,7 +742,7 @@ namespace ege
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] >= 100 && a[i] <= 999 && a[i] % 7 != 0)
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 7 != 0 && a[i] > max)
 				{
 					max = a[i];
 				}
@@ -764,7 +768,7 @@ namespace ege
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] >= 100 && a[i] <= 999 && a[i] % 9 != 0)
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 9 == 0 && a[i] > max)
 				{
 					max = a[i];
 				}
@@ -790,7 +794,7 @@ namespace ege
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] >= 100 && a[i] <= 999 && a[i] % 2 == 0)
+				if (a[i] >= 100 && a[i] <= 999 && a[i] % 2 == 0 && a[i] > max)
 				{
 					max = a[i];
 				}
@@ -803,6 +807,58 @@ namespace ege
 			{
 				cout << max;
 			}
+		}
+
+		void task2910()
+		{
+			int const n = 10;
+			int a[n][n];
+			for (int i = 0; i < n; ++i)
+			{
+				for (int j = 0; j < n; ++j)
+				{
+					cin >> a[i][j];
+				}
+			}
+
+			int sumOfRowMax = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				int maxOfCurrentRow = INT_MIN;
+				for (int j = 0; j < n; ++j)
+				{
+					if (a[i][j] > maxOfCurrentRow)
+					{
+						maxOfCurrentRow = a[i][j];
+					}
+				}
+				sumOfRowMax += maxOfCurrentRow;
+			}
+			
+			cout << sumOfRowMax;
+		}
+
+		void task2934()
+		{
+			int const n = 25;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+
+			int min = INT_MAX;
+			int minIndex = -1;
+			for (int i = 0; i < n; ++i)
+			{
+				if (a[i] < min && a[i] > 40)
+				{
+					min = a[i];
+					minIndex = i;
+				}
+			}
+
+			cout << minIndex;
 		}
 	}
 	// end of namespace ege253
