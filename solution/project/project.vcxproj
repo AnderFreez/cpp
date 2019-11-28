@@ -144,10 +144,6 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="hw041119.txt" />
-    <Text Include="hw081119.txt" />
-    <Text Include="hw281019.txt" />
-    <Text Include="hw311019.txt" />
     <Text Include="incomprehensible tasks.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

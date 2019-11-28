@@ -70,18 +70,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="hw281019.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="hw311019.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="hw041119.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="hw081119.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
     <Text Include="incomprehensible tasks.txt">
       <Filter>Resource Files</Filter>
     </Text>

@@ -1041,6 +1041,84 @@ namespace ege
 			}
 			cout << mult;
 		}
+
+		void task2913()
+		{
+			int const n = 30;
+			int a[n];
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 0)
+				{
+					sum += a[i];
+				}
+			}
+			cout << sum
+		}
+
+		void task2915()
+		{
+			int const n = 30;
+			int a[n];
+			int max = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 0 && a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			cout << max;
+		}
+
+		void task2923()
+		{
+			int const n = 30;
+			int a[n];
+			double sum = 0;
+			double amount = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] == 4 || a[i] == 5)
+				{
+					sum += a[i];
+					++amount;
+				}
+			}
+			cout << sum / amount;
+		}
+
+		void task3626()
+		{
+			int const n = 30;
+			int a[n];
+			double sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] != 15)
+				{
+					sum += a[i];
+				}
+			}
+			cout << sum;
+		}
 	}
 	// end of namespace ege254
 
