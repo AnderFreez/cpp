@@ -100,7 +100,7 @@ namespace ege
 	{
 		void task2917();
 
-		void task2903();
+		void task2904();
 
 		void task2913();
 		
@@ -109,6 +109,10 @@ namespace ege
 		void task2923();
 
 		void task3626();
+
+		void task2913difficult();
+
+		void task2903();
 	}
 	// end of namespace ege254
 

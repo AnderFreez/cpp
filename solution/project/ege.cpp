@@ -1005,7 +1005,7 @@ namespace ege
 
 	namespace ege254
 	{
-		void task2903()
+		void task2904()
 		{
 			int const n = 2016;
 			int a[n];
@@ -1042,7 +1042,7 @@ namespace ege
 			cout << mult;
 		}
 
-		void task2913()
+		void task2915()
 		{
 			int const n = 30;
 			int a[n];
@@ -1058,26 +1058,83 @@ namespace ege
 					sum += a[i];
 				}
 			}
-			cout << sum
+			if (sum == 0)
+			{
+				cout << "NO";
+			}
+			else
+			{
+				cout << sum;
+			}
 		}
 
-		void task2915()
+		void task2913()
 		{
-			int const n = 30;
+			int const n = 10;
 			int a[n];
-			int max = INT_MAX;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
 			}
-			for (int i = 0; i < n; i++)
+			int maxNegativeLength = INT_MIN;
+			int currentNegativeLength = 0;
+			for (int i = 0; i < n; ++i)
 			{
-				if (a[i] < 0 && a[i] > max)
+				if (a[i] < 0)
 				{
-					max = a[i];
+					++currentNegativeLength;
+				}
+				if (a[i] >= 0 || i == n - 1)
+				{
+					if (currentNegativeLength > maxNegativeLength)
+					{
+						maxNegativeLength = currentNegativeLength;
+						currentNegativeLength = 0;
+					}
 				}
 			}
-			cout << max;
+
+			cout << maxNegativeLength;
+		}
+
+		void task2913difficult()
+		{
+			int const n = 10;
+			int a[n];
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			int maxNegativeLength = INT_MIN;
+			int currentNegativeLength = 0;
+			for (int i = 0; i < n - 1; ++i)
+			{
+				bool caseGo = (a[i] < 0) && (a[i + 1] < 0) && (i + 1 < n - 1);
+				bool caseEndOfArray = (a[i] < 0) && (a[i + 1] < 0) && (i + 1 == n - 1);
+				bool caseEndOfCurrentSequence = (a[i] < 0) && (a[i + 1] > 0);
+				if (caseGo)
+				{
+					++currentNegativeLength;
+				}
+				if (caseEndOfCurrentSequence)
+				{
+					++currentNegativeLength;
+					if (currentNegativeLength > maxNegativeLength)
+					{
+						maxNegativeLength = currentNegativeLength;
+						currentNegativeLength = 0;
+					}
+				}
+				if (caseEndOfArray)
+				{
+					currentNegativeLength += 2;
+					if (currentNegativeLength > maxNegativeLength)
+					{
+						maxNegativeLength = currentNegativeLength;
+					}
+				}
+			}
+			cout << maxNegativeLength;
 		}
 
 		void task2923()
@@ -1105,19 +1162,91 @@ namespace ege
 		{
 			int const n = 30;
 			int a[n];
-			double sum = 0;
+			int sum = 0;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] != 15)
+				if (a[i] % 15 != 0)
 				{
 					sum += a[i];
 				}
 			}
 			cout << sum;
+		}
+
+		void task2903difficult()
+		{
+			int const n = 10;
+			int a[n];
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			int maxNegativeLength = INT_MIN;
+			int currentNegativeLength = 0;
+			for (int i = 0; i < n - 1; ++i)
+			{
+				bool caseGo = (a[i] < a[i + 1]) && (i + 1 < n - 1);
+				bool caseEndOfArray = (a[i] < a[i + 1]) && (i + 1 == n - 1);
+				bool caseEndOfCurrentSequence = a[i] >= a[i + 1];
+				if (caseGo)
+				{
+					++currentNegativeLength;
+				}
+				if (caseEndOfCurrentSequence)
+				{
+					++currentNegativeLength;
+					if (currentNegativeLength > maxNegativeLength)
+					{
+						maxNegativeLength = currentNegativeLength;
+						currentNegativeLength = 0;
+					}
+				}
+				if (caseEndOfArray)
+				{
+					currentNegativeLength += 2;
+					if (currentNegativeLength > maxNegativeLength)
+					{
+						maxNegativeLength = currentNegativeLength;
+					}
+				}
+			}
+			cout << maxNegativeLength;
+		}
+
+		void task2903()
+		{
+			int const n = 10;
+			int a[n];
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			int maxNegativeLength = INT_MIN;
+			int currentNegativeLength = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				if (a[i] < a[i + 1])
+				{
+					++currentNegativeLength;
+				}
+				else
+				{
+					if (currentNegativeLength > maxNegativeLength)
+					{
+						maxNegativeLength = currentNegativeLength;
+						currentNegativeLength = 0;
+					}
+				}
+				if (currentNegativeLength > maxNegativeLength)
+				{
+					maxNegativeLength = currentNegativeLength;
+				}
+			}
+			cout << maxNegativeLength;
 		}
 	}
 	// end of namespace ege254
