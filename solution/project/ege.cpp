@@ -1248,6 +1248,54 @@ namespace ege
 			}
 			cout << maxNegativeLength;
 		}
+
+		void task4569()
+		{
+			int const n = 10;
+			int a[n];
+			int mult = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 2 != 0 && a[i] % 3 != 0)
+				{
+					mult *= a[i];
+				}
+			}
+			cout << mult;
+		}
+
+		void task6349()
+		{
+			int const n = 10;
+			int a[n];
+			int mult = 0;
+			int index = 0;
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+				index = i;
+			}
+			while (a[index] != 0)
+			{
+				int digit = a[index] % 10;
+				sum += 0;
+			}
+		}
+			
+		void task6434()
+		{
+
+		}
+
+		void task6512()
+		{
+
+		}
 	}
 	// end of namespace ege254
 

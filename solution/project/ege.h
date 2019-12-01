@@ -113,6 +113,14 @@ namespace ege
 		void task2913difficult();
 
 		void task2903();
+
+		void task();
+
+		void task();
+
+		void task();
+
+		void task();
 	}
 	// end of namespace ege254
 
