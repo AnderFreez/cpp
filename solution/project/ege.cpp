@@ -1225,42 +1225,46 @@ namespace ege
 			{
 				cin >> a[i];
 			}
-			int maxNegativeLength = INT_MIN;
-			int currentNegativeLength = 0;
-			for (int i = 0; i < n; ++i)
+			int maxIncreaseLength = INT_MIN;
+			int currentIncreaseLength = 1;
+			for (int i = 0; i < n - 1; ++i)
 			{
 				if (a[i] < a[i + 1])
 				{
-					++currentNegativeLength;
+					++currentIncreaseLength;/*
+					if (i + 1 == n - 1 && currentIncreaseLength > maxIncreaseLength)
+					{
+						maxIncreaseLength = currentIncreaseLength;
+					}*/
 				}
 				else
 				{
-					if (currentNegativeLength > maxNegativeLength)
+					if (currentIncreaseLength >= maxIncreaseLength)
 					{
-						maxNegativeLength = currentNegativeLength;
-						currentNegativeLength = 0;
+						maxIncreaseLength = currentIncreaseLength;
+						currentIncreaseLength = 1;
 					}
 				}
-				if (currentNegativeLength > maxNegativeLength)
+				if (currentIncreaseLength > maxIncreaseLength)
 				{
-					maxNegativeLength = currentNegativeLength;
+					maxIncreaseLength = currentIncreaseLength;
 				}
 			}
-			cout << maxNegativeLength;
+			cout << maxIncreaseLength;
 		}
 
 		void task4569()
 		{
 			int const n = 10;
 			int a[n];
-			int mult = 0;
+			int mult = 1;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] % 2 != 0 && a[i] % 3 != 0)
+				if (a[i] % 2 != 0 && a[i] % 3 == 0)
 				{
 					mult *= a[i];
 				}
@@ -1272,18 +1276,21 @@ namespace ege
 		{
 			int const n = 10;
 			int a[n];
-			int mult = 0;
-			int index = 0;
-			int sum = 0;
+			int mult = 1;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
-				index = i;
 			}
-			while (a[index] != 0)
+			for (int i = 0; i < n; ++i)
 			{
-				int digit = a[index] % 10;
-				sum += 0;
+				if (a[i] >= 10 && a[i] < 100)
+				{
+					int sum = a[i] % 10 + a[i] / 10;
+					if (sum % 2 == 0)
+					{
+						mult *= a[i];
+					}
+				}
 			}
 		}
 			
@@ -1295,6 +1302,34 @@ namespace ege
 		void task6512()
 		{
 
+		}
+
+		void task2932()
+		{
+			int a[12][12];
+			for (int i = 0; i < 12; ++i)
+			{
+				for (int j = 0; j < 12; ++j)
+				{
+					a[i][j] = 1;
+				}
+			}
+			for (int i = 2; i < 10; ++i)
+			{
+				for (int j = 2; j < 10; ++j)
+				{
+					a[i][j] = 0;
+				}
+			}
+			int x = 0;
+			int y = 0;
+			cin >> x >> y;
+			--x;
+			--y;
+			if (a[x - 2][y - 1] == 0)
+			{
+				cout << "(" << x - 1 << "; " << y << ")" << " ";
+			}
 		}
 	}
 	// end of namespace ege254

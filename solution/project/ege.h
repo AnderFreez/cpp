@@ -121,6 +121,8 @@ namespace ege
 		void task();
 
 		void task();
+
+		void task2932();
 	}
 	// end of namespace ege254
 
