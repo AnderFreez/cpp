@@ -1267,34 +1267,84 @@ namespace ege
 			}
 			cout << mult;
 		}
-
-		void task6349()
+		
+		void task4860()
 		{
 			int const n = 10;
 			int a[n];
-			int mult = 0;
-			int index = 0;
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++) 
+			{
+				if (a[i] < 100 && a[i] > 9 && a[i] % 10 != 7 && a[i] < min)
+				{
+					min = a[i];
+				}
+			}
+			cout << min;
+		}
+
+		void task4866()
+		{
+			int const n = 10;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 10 == 7 && a[i] < min)
+				{
+					min = a[i];
+				}
+			}
+			cout << min;
+		}
+
+		void task5068()
+		{
+			int const n = 10;
+			int a[n];
+			int sum = 0;
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n - 1; ++i)
+			{
+				sum = a[i] + a[i + 1];
+				if (sum % 2 == 0 && sum < min)
+				{
+					min = a[i];
+				}
+			}
+			cout << sum;
+		}
+
+		void task6245()
+		{
+			int const n = 10;
+			int a[n];
 			int sum = 0;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
-				index = i;
 			}
-			while (a[index] != 0)
+			for (int i = 0; i < n; ++i)
 			{
-				int digit = a[index] % 10;
-				sum += 0;
+				sum = a[i] + a[i + 1];
+				if (a[i] % 100 != 99 && a[i] % 10 == 9 && a[i] < 1000 && a[i] > 99)
+				{
+					sum = a[i];
+				}
 			}
-		}
-			
-		void task6434()
-		{
-
-		}
-
-		void task6512()
-		{
-
+			cout << sum;
 		}
 	}
 	// end of namespace ege254
