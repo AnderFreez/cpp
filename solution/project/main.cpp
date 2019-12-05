@@ -7,6 +7,6 @@ using namespace std;
 
 int main()
 {
-	ege::ege254::task2903();
+	ege::ege254::task2932();
 	return 0;
 }
