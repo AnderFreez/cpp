@@ -1391,6 +1391,204 @@ namespace ege
 				cout << "(" << x - 1 << "; " << y << ")" << " ";
 			}
 		}
+
+		void task7426()
+		{
+			int const n = 20;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int max = INT_MIN;
+			int count = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				if (a[i] >= 10 && a[i] <= 99)
+				{
+					int firstDigit = a[i] / 10;
+					if (a[i] % firstDigit != 0 && a[i] > max)
+					{
+						max = a[i];
+						++count;
+					}
+				}
+			}
+			if (count == 0)
+			{
+				cout << "Not found";
+			}
+			else
+			{
+				cout << max;
+			}
+		}
+
+		void task5256()
+		{
+			int const n = 70;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int min = INT_MAX;
+			for (int i = 0; i < n - 1; ++i)
+			{
+				if (a[i] % 2 == a[i + 1] % 2)
+				{
+					int sum = a[i] + a[i + 1];
+					if (sum < min)
+					{
+						min = sum;
+					}
+				}
+			}
+			cout << min;
+		}
+
+		void task6790()
+		{
+			int const n = 2014;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int count = 0;
+			for (int i = 0; i < n - 1; ++i)
+			{
+				if (a[i + 1] > 2 * a[i])
+				{
+					++count;
+				}
+			}
+			cout << count;
+		}
+
+		void task6904()
+		{
+			int const n = 2014;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int minDistance = INT_MAX;
+			int index = -1;
+			for (int i = 0; i < n - 1; ++i)
+			{
+				int currentDistance = abs(a[i + 1] - a[i]);
+				if (currentDistance < minDistance)
+				{
+					minDistance = currentDistance;
+					index = i;
+				}
+			}
+			cout << a[index] << " " << a[index + 1];
+		}
+
+		void task6989()
+		{
+			int const n = 2014;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int amount = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				int sum = a[i] + a[n - (i + 1)];
+				if (sum > 20)
+				{
+					++amount;
+				}
+			}
+			cout << amount;
+		}
+
+		void task7319()
+		{
+			int const n = 6;
+			int a[n];
+			int amount = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n - 1; ++i)
+			{
+				if (a[i] < a[i - 1] && a[i] < a[i + 1] && a[i] % 3 == 0)
+				{
+					++amount;
+				}
+			}
+			if (a[0] < a[1] && a[0] % 3 == 0)
+			{
+				++amount;
+			}
+			if (a[n - 1] < a[n - 2] && a[n - 1] % 3 == 0)
+			{
+				++amount;
+			}
+			cout << amount;
+		}
+
+		void task13752()
+		{
+			int const n = 6;
+			int a[n];
+			int amount = 0;
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			for (int i = 1; i < n; ++i)
+			{
+				if (a[i] > 100 && a[i] % 5 == 0)
+				{
+					++amount;
+				}
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 100 && a[i] % 5 == 0)
+				{
+					a[i] = amount;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
+		}
+
+		void task15810()
+		{
+			int const n = 6;
+			int a[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> a[i];
+			}
+			int max = INT_MIN;
+			for (int i = 1; i < n; ++i)
+			{
+				if (a[i] < 100 && a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			int delta = 100 - max;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 100 && a[i] > max)
+				{
+					a[i] += delta;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
+		}
+
+
 	}
 	// end of namespace ege254
 
