@@ -139,6 +139,18 @@ namespace ege
 		void task13752();
 
 		void task15810();
+
+		void task15935();
+
+		void task();
+
+		void task();
+
+		void task();
+
+		void task();
+
+		void task();
 	}
 	// end of namespace ege254
 
