@@ -1595,6 +1595,10 @@ namespace ege
 			int min = INT_MAX;
 			for (int i = 0; i < n; i++)
 			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
 				if (a[i] < min && a[i] % 2 == 0)
 				{
 					min = a[i];
@@ -1611,19 +1615,90 @@ namespace ege
 			myArray::InOut::arrayOut(a, n);
 		}
 
-		void task()
+		void task16052()
 		{
-
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < min && a[i] % 6 != 0)
+				{
+					min = a[i];
+				}
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 6 != 0)
+				{
+					a[i] = min;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
 		}
 
-		void task()
+		void task16400()
 		{
 
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < min)
+				{
+					min = a[i];
+				}
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > min * 2)
+				{
+					a[i] -= min * 2;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
 		}
 
-		void task()
+		void task17343()
 		{
-
+			int const n = 30;
+			int a[n];
+			int minOfEven = INT_MAX;
+			int minOfOdd = INT_MAX;
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < minOfEven && a[i] % 2 == 0)
+				{
+					minOfEven = a[i];
+				}
+				if (a[i] < minOfOdd && a[i] % 2 == 1)
+				{
+					minOfEven = a[i];
+				}
+			}
+			sum = minOfEven + minOfOdd;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > sum)
+				{
+					a[i] -= sum;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
 		}
 
 		void task()

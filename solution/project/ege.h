@@ -142,11 +142,11 @@ namespace ege
 
 		void task15935();
 
-		void task();
+		void task16052();
 
-		void task();
+		void task16400();
 
-		void task();
+		void task17343();
 
 		void task();
 
