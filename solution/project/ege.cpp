@@ -1738,7 +1738,121 @@ namespace ege
 
 	namespace ege255
 	{
+		void task9706()
+		{
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 1000 && a[i] > 99 && a[i] % 7 == 0 && a[i] < min)
+				{
+					min = a[i];
+				}
+			}
+			if (min == INT_MAX)
+			{
+				cout << "НЕ Найдено";
+			}
+			else
+			{
+				cout << min;
+			}
+		}
 
+		void task3605()
+		{
+			int const n = 30;
+			int a[n];
+			int minIndex = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < 0 && i < minIndex)
+				{
+					minIndex = i;
+				}
+			}
+			if (minIndex == INT_MAX)
+			{
+				cout << "Не Найдено";
+			}
+			else
+			{
+				cout << minIndex;
+			}
+		}
+
+		void task3606()
+		{
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 0)
+				{
+					min = a[i];
+				}
+			}
+			if (min == INT_MAX)
+			{
+				cout << "Не Найдено";
+			}
+			else
+			{
+				cout << min;
+			}
+		}
+
+		void task4703()
+		{
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 0 && a[i] % 2 != 0)
+				{
+					min = a[i];
+				}
+			}
+				cout << min;
+		}
+
+		void task2902()
+		{
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 20 && i < min)
+				{
+					min = a[i];
+				}
+			}
+			cout << min;
+		}	
 	}
 	// end of namespace ege255
 }
