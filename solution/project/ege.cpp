@@ -1588,19 +1588,72 @@ namespace ege
 			myArray::InOut::arrayOut(a, n);
 		}
 
-		void task15837()
+		void task15935()
 		{
-
-			int const n = 6;
+			int const n = 2018;
 			int a[n];
-			for (int i = 0; i < n; ++i)
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
 			}
-			int min = INT_MAX;
-			for (int i = 1; i < n; ++i)
+			for (int i = 0; i < n; i++)
 			{
-				if (a[i] > 100 && a[i] < min)
+				if (a[i] < min && a[i] % 2 == 0)
+				{
+					min = a[i];
+				}
+			}
+			int delta = min - 2;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 2 == 0)
+				{
+					a[i] -= delta;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
+		}
+
+		void task16052()
+		{
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < min && a[i] % 6 != 0)
+				{
+					min = a[i];
+				}
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] % 6 != 0)
+				{
+					a[i] = min;
+				}
+			}
+			myArray::InOut::arrayOut(a, n);
+		}
+
+		void task16400()
+		{
+
+			int const n = 30;
+			int a[n];
+			int min = INT_MAX;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < min)
 				{
 					min = a[i];
 				}
@@ -1611,11 +1664,17 @@ namespace ege
 				if (a[i] < 100 && a[i] < min)
 				{
 					a[i] -= delta;
+					for (int i = 0; i < n; i++)
+					{
+						if (a[i] > min * 2)
+						{
+							a[i] -= min * 2;
+						}
+					}
+					myArray::InOut::arrayOut(a, n);
 				}
 			}
-			myArray::InOut::arrayOut(a, n);
 		}
-
 		void task()
 		{
 
@@ -1628,7 +1687,7 @@ namespace ege
 			int max = INT_MIN;
 			for (int i = 1; i < n; ++i)
 			{
-				if (a[i] < 100 && a[i] > max &&  a[i] % 2 == 0)
+				if (a[i] < 100 && a[i] > max&& a[i] % 2 == 0)
 				{
 					max = a[i];
 				}
@@ -1636,52 +1695,43 @@ namespace ege
 			int delta = 100 - max;
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] < 100 && a[i] > max && a[i] % 2 == 0)
+				if (a[i] < 100 && a[i] > max&& a[i] % 2 == 0)
 				{
 					a[i] += delta;
 				}
 			}
+		}
+		void task17343()
+		{
+			int const n = 30;
+			int a[n];
+			int minOfEven = INT_MAX;
+			int minOfOdd = INT_MAX;
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				cin >> a[i];
+			}
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] < minOfEven && a[i] % 2 == 0)
+				{
+					minOfEven = a[i];
+				}
+				if (a[i] < minOfOdd && a[i] % 2 == 1)
+				{
+					minOfEven = a[i];
+				}
+			}
+			sum = minOfEven + minOfOdd;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > sum)
+				{
+					a[i] -= sum;
+				}
+			}
 			myArray::InOut::arrayOut(a, n);
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
-		}
-
-		void task()
-		{
-
 		}
 	}
 	// end of namespace ege254
