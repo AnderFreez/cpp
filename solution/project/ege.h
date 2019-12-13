@@ -154,7 +154,7 @@ namespace ege
 	{
 		void task9706();
 
-		void task3605();
+		void task3602();
 
 		void task3606();
 

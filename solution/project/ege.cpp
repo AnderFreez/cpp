@@ -1675,9 +1675,9 @@ namespace ege
 				}
 			}
 		}
+
 		void task()
 		{
-
 			int const n = 6;
 			int a[n];
 			for (int i = 0; i < n; ++i)
@@ -1701,6 +1701,7 @@ namespace ege
 				}
 			}
 		}
+
 		void task17343()
 		{
 			int const n = 30;
@@ -1764,11 +1765,12 @@ namespace ege
 			}
 		}
 
-		void task3605()
+		void task3602()
 		{
 			int const n = 30;
 			int a[n];
 			int minIndex = INT_MAX;
+			int count = 0;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
@@ -1778,9 +1780,10 @@ namespace ege
 				if (a[i] < 0 && i < minIndex)
 				{
 					minIndex = i;
+					++count;
 				}
 			}
-			if (minIndex == INT_MAX)
+			if (count == 0)
 			{
 				cout << "Не Найдено";
 			}
@@ -1795,6 +1798,7 @@ namespace ege
 			int const n = 30;
 			int a[n];
 			int min = INT_MAX;
+			int count = 0;
 			for (int i = 0; i < n; i++)
 			{
 				cin >> a[i];
@@ -1804,9 +1808,10 @@ namespace ege
 				if (a[i] > 0)
 				{
 					min = a[i];
+					++count;
 				}
 			}
-			if (min == INT_MAX)
+			if (count == 0)
 			{
 				cout << "Не Найдено";
 			}
@@ -1832,7 +1837,7 @@ namespace ege
 					min = a[i];
 				}
 			}
-				cout << min;
+			cout << min;
 		}
 
 		void task2902()
@@ -1846,7 +1851,7 @@ namespace ege
 			}
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] > 20 && i < min)
+				if (a[i] > 20 && a[i] < min)
 				{
 					min = a[i];
 				}
