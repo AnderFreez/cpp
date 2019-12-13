@@ -39,6 +39,9 @@
     <ClInclude Include="ege.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="work131219.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="integerNumbers.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="work131219.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

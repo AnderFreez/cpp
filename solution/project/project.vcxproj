@@ -131,6 +131,7 @@
     <ClInclude Include="oge.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="test.h" />
+    <ClInclude Include="work131219.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithmCompare.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="oge.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="work131219.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="incomprehensible tasks.txt" />
