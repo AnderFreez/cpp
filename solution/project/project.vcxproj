@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="algorithmCompare.h" />
     <ClInclude Include="ege.h" />
+    <ClInclude Include="hwwork151219.h" />
     <ClInclude Include="integerNumbers.h" />
     <ClInclude Include="myArray.h" />
     <ClInclude Include="myMath.h" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="algorithmCompare.cpp" />
     <ClCompile Include="ege.cpp" />
+    <ClCompile Include="hwwork151219.cpp" />
     <ClCompile Include="integerNumbers.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myArray.cpp" />
@@ -144,9 +146,6 @@
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="work131219.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="incomprehensible tasks.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

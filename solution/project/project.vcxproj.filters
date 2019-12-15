@@ -42,6 +42,9 @@
     <ClInclude Include="work131219.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="hwwork151219.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="integerNumbers.cpp">
@@ -74,10 +77,8 @@
     <ClCompile Include="work131219.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="incomprehensible tasks.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <ClCompile Include="hwwork151219.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
