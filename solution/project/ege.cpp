@@ -8,54 +8,185 @@ namespace ege
 {
 	namespace ege24
 	{
-		void task8672()
+		namespace ege241
 		{
-			int number = 0;
-			int mult = 1;
-			int amount = 0;
-			for (int i = 0; i < 4; i++)
+			void task8672()
 			{
-				cin >> number;
-				if (number > 0)
+				int number = 0;
+				int mult = 1;
+				int amount = 0;
+				for (int i = 0; i < 4; i++)
 				{
-					++amount;
-					mult *= number;
+					cin >> number;
+					if (number > 0)
+					{
+						++amount;
+						mult *= number;
+					}
+				}
+				if (amount == 0)
+				{
+					cout << "NO";
+				}
+				else
+				{
+					cout << amount << " " << mult;
 				}
 			}
-			if (amount == 0)
-			{
-				cout << "NO";
-			}
-			else
-			{
-				cout << amount << " " << mult;
-			}
-		}
 
-		void task9176()
-		{
-			int number = 0;
-			int sum = 0;
-			int max = INT_MIN;
-			for (int i = 0; i < 4; i++)
+			void task9176()
 			{
-				cin >> number;
-				if (number < 0)
+				int number = 0;
+				int sum = 0;
+				int max = INT_MIN;
+				for (int i = 0; i < 4; i++)
 				{
-					sum += number;
+					cin >> number;
+					if (number < 0)
+					{
+						sum += number;
+					}
+					if (number > max)
+					{
+						max = number;
+					}
 				}
-				if (number > max)
+				cout << sum << " " << max;
+			}
+		}
+		// end of namespace ege241
+
+		namespace ege242
+		{
+			void task7935()
+			{
+				double sum = 0;
+				double a;
+				cin >> a;
+				int k = 0;
+				while (sum < a)
 				{
-					max = number;
+					++k;
+					sum += 1 / k;
+				}
+				cout << k;
+			}
+
+			void task9208()
+			{
+				double a;
+				cin >> a;
+				double k = 0;
+				double sum = 0;
+				while (sum < a)
+				{
+					++k;
+					sum += 1 / k;
+				}
+				cout << k;
+			}
+
+			void task()
+			{
+				int n;
+				cin >> n;
+				int k = 0;
+				int sum = 0;
+				while (sum <= n)
+				{
+					++k;
+					sum += k;
+				}
+				cout << k;
+			}
+
+			void task()
+			{
+				double c;
+				cin >> c;
+				double c1 = -c;
+				if (c1 < 0)
+				{
+					cout << "no solution";
+					return;
+				}
+				if (c1 == 0)
+				{
+					cout << 0;
+					return;
+				}
+				if (c1 > 0)
+				{
+					cout << "x = +-" << sqrt(c1);
 				}
 			}
-			cout << sum << " " << max;
-		}
 
-		void task()
+			void task()
+			{
+				double a;
+				double b;
+				cin >> a >> b;
+				if (a == 0 && b != 0)
+				{
+					cout << "no solution";
+					return;
+				}
+				if (a == 0 && b == 0)
+				{
+					cout << "x = all";
+					return;
+				}
+				if (a != 0)
+				{
+					double c = b / a;
+					if (c < 0)
+					{
+						cout << "no solution";
+						return;
+					}
+					if (c == 0)
+					{
+						cout << 0;
+						return;
+					}
+					if (c > 0)
+					{
+						cout << "+-" << c;
+					}
+				}
+			}
+		}
+		// end of namespace ege242
+
+		namespace ege243
 		{
 
 		}
+		// end of namespace ege243
+
+		namespace ege244
+		{
+
+		}
+		// end of namespace ege244
+
+		namespace ege245
+		{
+
+		}
+		// end of namespace ege245
+
+		namespace ege246
+		{
+
+		}
+		// end of namespace ege246
+
+		namespace ege247
+		{
+
+		}
+		// end of namespace ege247
 	}
 	// end of namespace ege24
 

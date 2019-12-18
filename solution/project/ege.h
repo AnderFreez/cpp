@@ -12,7 +12,7 @@ namespace ege
 
 		namespace ege242
 		{
-
+			void task7935();
 		}
 		// end of namespace ege242
 
