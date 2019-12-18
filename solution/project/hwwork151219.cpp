@@ -40,7 +40,7 @@ namespace hwwork151219
 		for (int i = 0; i < n; i++)
 		{
 			cin >> a[i];
-			if (a[i] > 0 && a[i] % 6 != 0 && a[i] < min)
+			if (a[i] % 6 != 0 && a[i] < min)
 			{
 				min = a[i];
 			}
@@ -73,12 +73,17 @@ namespace hwwork151219
 				min = a[i];
 			}
 		}
+		cout << min;
 	}
 
 	void task3614()
 	{
 		int const n = 6;
 		int a[n];
+		for (int i = 0; i < n; i++)
+		{
+			cin >> a[i];
+		}
 		int max1 = INT_MIN;
 		int max2 = INT_MIN;
 		for (int i = 0; i < n; i++)
@@ -87,7 +92,7 @@ namespace hwwork151219
 			{
 				continue;
 			}
-			if (a[i] > max2&& a[i] <= max1)
+			if (a[i] > max2 && a[i] <= max1)
 			{
 				max2 = a[i];
 				continue;
@@ -107,6 +112,7 @@ namespace hwwork151219
 		int const n = 6;
 		int a[n];
 		int max = INT_MIN;
+		bool yeah = false;
 		for (int i = 0; i < n; i++)
 		{
 			cin >> a[i];
@@ -116,15 +122,16 @@ namespace hwwork151219
 			if (a[i] < 1000 && a[i] > 99 && a[i] % 4 == 0 && a[i] > max)
 			{
 				max = a[i];
+				yeah = true;
 			}
 		}
-		if (max == INT_MIN)
+		if (yeah)
 		{
-			cout << "NO";
+			cout << max;
 		}
 		else
 		{
-			cout << max;
+			cout << "";
 		}
 	}
 
@@ -162,7 +169,10 @@ namespace hwwork151219
 		for (int i = 0; i < 6; i++)
 		{
 			cin >> number;
-
+			if (number % 2 == 0)
+			{
+				sum += number;
+			}
 		}
 		if (sum == 0)
 		{
