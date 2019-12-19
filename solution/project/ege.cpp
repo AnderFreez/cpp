@@ -86,73 +86,119 @@ namespace ege
 				cout << k;
 			}
 
-			void task()
+			void task8112()
 			{
-				int n;
-				cin >> n;
-				int k = 0;
+				int x;
+				cin >> x;
+				int max = INT_MIN;
+				int amount = 0;
+				while (x != 0)
+				{
+					int digit = x % 10;
+					if (digit % 3 == 0 && digit > max)
+					{
+						max = digit;
+						++amount;
+					}
+				}
+				if (amount == 0)
+				{
+					cout << "NO";
+				}
+				else
+				{
+					cout << max;
+				}
+			}
+
+			void task9375()
+			{
+				int x;
+				cin >> x;
 				int sum = 0;
-				while (sum <= n)
+				while (x != 0)
 				{
-					++k;
-					sum += k;
+					int digit = x % 10;
+					sum += digit;
+					x /= 10;
 				}
-				cout << k;
-			}
-
-			void task()
-			{
-				double c;
-				cin >> c;
-				double c1 = -c;
-				if (c1 < 0)
+				if (sum == 0)
 				{
-					cout << "no solution";
-					return;
+					cout << "NO";
 				}
-				if (c1 == 0)
+				else
 				{
-					cout << 0;
-					return;
-				}
-				if (c1 > 0)
-				{
-					cout << "x = +-" << sqrt(c1);
+					cout << sum;
 				}
 			}
 
-			void task()
+			void task5372()
 			{
-				double a;
-				double b;
-				cin >> a >> b;
-				if (a == 0 && b != 0)
+				int x;
+				cin >> x;
+				int amount = 0;
+				while (x != 0)
 				{
-					cout << "no solution";
-					return;
+					int digit = x % 10;
+					if (digit % 3 == 0)
+					{
+						++amount;
+					}
+					x /= 10;
 				}
-				if (a == 0 && b == 0)
+				if (amount == 0)
 				{
-					cout << "x = all";
-					return;
+					cout << "NO";
 				}
-				if (a != 0)
+				else
 				{
-					double c = b / a;
-					if (c < 0)
+					cout << amount;
+				}
+			}
+
+			void task5468()
+			{
+				int x;
+				cin >> x;
+				int mult = 1;
+				while (x != 0)
+				{
+					int digit = x % 10;
+					mult *= digit;
+					x /= 10;
+				}
+				if (mult == 1)
+				{
+					cout << "NO";
+				}
+				else
+				{
+					cout << mult;
+				}
+			}
+
+			void task5500()
+			{
+				int x;
+				cin >> x;
+				int max = INT_MIN;
+				int amount = 0;
+				while (x != 0)
+				{
+					int digit = x % 10;
+					if (x > max)
 					{
-						cout << "no solution";
-						return;
+						max = digit;
 					}
-					if (c == 0)
-					{
-						cout << 0;
-						return;
-					}
-					if (c > 0)
-					{
-						cout << "+-" << c;
-					}
+					x /= 10;
+				}
+				if (amount == 0)
+				{
+					cout << "NO";
+				}
+				else
+				{
+					cout << max;
 				}
 			}
 		}
