@@ -86,6 +86,53 @@ namespace ege
 				cout << k;
 			}
 
+			void task16399()
+			{
+				int a = 0;
+				cin >> a;
+				int after = 1;
+				int n = 0;
+				while (after < a)
+				{
+					++n;
+					after *= n;
+				}
+				int before = after / n;
+				if (a - before <= after - a)
+				{
+					cout << before;
+				}
+				else
+				{
+					cout << after;
+				}
+			}
+		}
+		// end of namespace ege242
+
+		namespace ege243
+		{
+			void task4568()
+			{
+				double x = 0;
+				cin >> x;
+				if (x >= -3 && x <= 1)
+				{
+					cout << "B";
+					return;
+				}
+				if (x >= 5 && x <= 9)
+				{
+					cout << "D";
+					return;
+				}
+				cout << "None";
+			}
+		}
+		// end of namespace ege243
+
+		namespace ege244
+		{
 			void task8112()
 			{
 				int x;
@@ -100,6 +147,7 @@ namespace ege
 						max = digit;
 						++amount;
 					}
+					x /= 10;
 				}
 				if (amount == 0)
 				{
@@ -119,7 +167,10 @@ namespace ege
 				while (x != 0)
 				{
 					int digit = x % 10;
-					sum += digit;
+					if (digit < 7)
+					{
+						sum += digit;
+					}
 					x /= 10;
 				}
 				if (sum == 0)
@@ -139,21 +190,10 @@ namespace ege
 				int amount = 0;
 				while (x != 0)
 				{
-					int digit = x % 10;
-					if (digit % 3 == 0)
-					{
-						++amount;
-					}
+					++amount;
 					x /= 10;
 				}
-				if (amount == 0)
-				{
-					cout << "NO";
-				}
-				else
-				{
-					cout << amount;
-				}
+				cout << amount;
 			}
 
 			void task5468()
@@ -167,14 +207,7 @@ namespace ege
 					mult *= digit;
 					x /= 10;
 				}
-				if (mult == 1)
-				{
-					cout << "NO";
-				}
-				else
-				{
-					cout << mult;
-				}
+				cout << mult;
 			}
 
 			void task5500()
@@ -182,37 +215,17 @@ namespace ege
 				int x;
 				cin >> x;
 				int max = INT_MIN;
-				int amount = 0;
 				while (x != 0)
 				{
 					int digit = x % 10;
-					if (x > max)
+					if (digit > max)
 					{
 						max = digit;
 					}
 					x /= 10;
 				}
-				if (amount == 0)
-				{
-					cout << "NO";
-				}
-				else
-				{
-					cout << max;
-				}
+				cout << max;
 			}
-		}
-		// end of namespace ege242
-
-		namespace ege243
-		{
-
-		}
-		// end of namespace ege243
-
-		namespace ege244
-		{
-
 		}
 		// end of namespace ege244
 

@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\works">
+      <UniqueIdentifier>{97c6e19c-6355-4185-8da2-305e7b505bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\works">
+      <UniqueIdentifier>{d1f068fc-8945-4f62-89ae-c89f6d81d803}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="integerNumbers.h">
@@ -40,10 +46,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="work131219.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\works</Filter>
     </ClInclude>
     <ClInclude Include="hwwork151219.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\works</Filter>
+    </ClInclude>
+    <ClInclude Include="work201219.h">
+      <Filter>Header Files\works</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -74,11 +83,14 @@
     <ClCompile Include="sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="work131219.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="hwwork151219.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\works</Filter>
+    </ClCompile>
+    <ClCompile Include="work131219.cpp">
+      <Filter>Source Files\works</Filter>
+    </ClCompile>
+    <ClCompile Include="work201219.cpp">
+      <Filter>Source Files\works</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
