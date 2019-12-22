@@ -48,10 +48,13 @@
     <ClInclude Include="work131219.h">
       <Filter>Header Files\works</Filter>
     </ClInclude>
-    <ClInclude Include="hwwork151219.h">
+    <ClInclude Include="work201219.h">
       <Filter>Header Files\works</Filter>
     </ClInclude>
-    <ClInclude Include="work201219.h">
+    <ClInclude Include="hwork151219.h">
+      <Filter>Header Files\works</Filter>
+    </ClInclude>
+    <ClInclude Include="hwork221219.h">
       <Filter>Header Files\works</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,13 +86,16 @@
     <ClCompile Include="sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hwwork151219.cpp">
-      <Filter>Source Files\works</Filter>
-    </ClCompile>
     <ClCompile Include="work131219.cpp">
       <Filter>Source Files\works</Filter>
     </ClCompile>
     <ClCompile Include="work201219.cpp">
+      <Filter>Source Files\works</Filter>
+    </ClCompile>
+    <ClCompile Include="hwork221219.cpp">
+      <Filter>Source Files\works</Filter>
+    </ClCompile>
+    <ClCompile Include="hwork151219.cpp">
       <Filter>Source Files\works</Filter>
     </ClCompile>
   </ItemGroup>

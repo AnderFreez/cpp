@@ -125,7 +125,8 @@
   <ItemGroup>
     <ClInclude Include="algorithmCompare.h" />
     <ClInclude Include="ege.h" />
-    <ClInclude Include="hwwork151219.h" />
+    <ClInclude Include="hwork151219.h" />
+    <ClInclude Include="hwork221219.h" />
     <ClInclude Include="integerNumbers.h" />
     <ClInclude Include="myArray.h" />
     <ClInclude Include="myMath.h" />
@@ -138,7 +139,8 @@
   <ItemGroup>
     <ClCompile Include="algorithmCompare.cpp" />
     <ClCompile Include="ege.cpp" />
-    <ClCompile Include="hwwork151219.cpp" />
+    <ClCompile Include="hwork221219.cpp" />
+    <ClCompile Include="hwork151219.cpp" />
     <ClCompile Include="integerNumbers.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myArray.cpp" />

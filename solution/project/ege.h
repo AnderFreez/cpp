@@ -39,26 +39,7 @@ namespace ege
 			void task5500();
 		}
 		// end of namespace ege244
-
-		namespace ege245
-		{
-
-		}
-		// end of namespace ege245
-
-		namespace ege246
-		{
-
-		}
-		// end of namespace ege246
-
-		namespace ege247
-		{
-
-		}
-		// end of namespace ege247
 	}
-	// end of namespace ege24
 
 	namespace ege25
 	{
