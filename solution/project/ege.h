@@ -40,6 +40,7 @@ namespace ege
 		}
 		// end of namespace ege244
 	}
+	// end of namespace ege24
 
 	namespace ege25
 	{
@@ -206,5 +207,17 @@ namespace ege
 		// end of namespace ege255
 	}
 	// end of namespace ege25
+
+	namespace ege27
+	{
+		namespace ege274
+		{
+			void task11363();
+
+			void task13423();
+		}
+		// end of namespace ege274
+	}
+	// end of namespace ege27
 }
 // end of namespace ege

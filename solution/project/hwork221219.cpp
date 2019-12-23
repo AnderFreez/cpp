@@ -37,11 +37,11 @@ namespace hwork221219
 	{
 		int x = 0;
 		cin >> x;
-		if (x > 0 && x < 6)
+		if (x >= 0 && x <= 6)
 		{
 			cout << "B";
 		}
-		if (x > 12 && x < 18)
+		if (x >= 12 && x <= 18)
 		{
 			cout << "D";
 		}

@@ -2088,6 +2088,88 @@ namespace ege
 		}
 		// end of namespace ege255
 	}
-	// end of namespace ege25o
+	// end of namespace ege25
+
+
+	namespace ege27
+	{
+		namespace ege274
+		{
+			void task11363()
+			{
+				int n = 0;
+				cin >> n;
+				int sumOfMax = 0;
+				int minSubtructNotDividedBy3 = INT_MAX;
+				int amount = 0;
+				int a = 0;
+				int b = 0;
+				for (int i = 0; i < n; ++i)
+				{
+					cin >> a >> b;
+					if (a > b)
+					{
+						sumOfMax += a;
+					}
+					else
+					{
+						sumOfMax += b;
+					}
+					if (abs(a - b) < minSubtructNotDividedBy3 && abs(a - b) % 3 != 0)
+					{
+						minSubtructNotDividedBy3 = abs(a - b);
+						++amount;
+					}
+				}
+				if (sumOfMax % 3 != 0)
+				{
+					cout << sumOfMax;
+					return;
+				}
+				if (amount == 0)
+				{
+					cout << 0;
+					return;
+				}
+				cout << sumOfMax - minSubtructNotDividedBy3;
+			}
+
+			void task13423()
+			{
+				int n = 0;
+				cin >> n;
+				int indexOfFirstMax = -1;
+				int firstMax = INT_MIN;
+				int sumOfDigits[28];
+				for (int i = 0; i < 28; ++i)
+				{
+					sumOfDigits[i] = 0;
+				}
+				int number = 0;
+				for (int i = 0; i < n; ++i)
+				{
+					cin >> number;
+					int sum = 0;
+					while (number != 0)
+					{
+						sum += number % 10;
+						number /= 10;
+					}
+					++sumOfDigits[sum];
+				}
+				for (int i = 0; i < 28; ++i)
+				{
+					if (sumOfDigits[i] > firstMax)
+					{
+						firstMax = sumOfDigits[i];
+						indexOfFirstMax = i;
+					}
+				}
+				cout << indexOfFirstMax;
+			}
+		}
+		// end of namespace ege274
+	}
+	// end of namespace ege27
 }
 // end of namespace ege
