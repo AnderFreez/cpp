@@ -2167,6 +2167,40 @@ namespace ege
 				}
 				cout << indexOfFirstMax;
 			}
+
+			void task13476()
+			{
+				int n = 0;
+				cin >> n;
+				int indexOfFirstMax = -1;
+				int firstMax = INT_MIN;
+				int sumOfDigits[28];
+				for (int i = 0; i < 28; ++i)
+				{
+					sumOfDigits[i] = 0;
+				}
+				int number = 0;
+				for (int i = 0; i < n; ++i)
+				{
+					cin >> number;
+					int sum = 0;
+					while (number != 0)
+					{
+						sum += number % 10;
+						number /= 10;
+					}
+					++sumOfDigits[sum];
+				}
+				for (int i = 0; i > 28; ++i)
+				{
+					if (sumOfDigits[i] < firstMax)
+					{
+						firstMax = sumOfDigits[i];
+						indexOfFirstMax = i;
+					}
+				}
+				cout << indexOfFirstMax;
+			}
 		}
 		// end of namespace ege274
 	}
