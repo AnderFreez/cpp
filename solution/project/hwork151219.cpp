@@ -1,5 +1,5 @@
 #include <iostream>
-#include "hwwork151219.h"
+#include "hwork151219.h"
 #include "myArray.h"
 
 using namespace std;

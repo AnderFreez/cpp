@@ -217,6 +217,12 @@ namespace ege
 			void task13423();
 
 			void task13476();
+
+			void task13503();
+
+			void task13530();
+
+			void task13611();
 		}
 		// end of namespace ege274
 	}

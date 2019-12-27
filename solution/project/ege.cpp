@@ -2172,8 +2172,8 @@ namespace ege
 			{
 				int n = 0;
 				cin >> n;
-				int indexOfFirstMax = -1;
-				int firstMax = INT_MIN;
+				int indexOfLastMin = -1;
+				int lastMin = INT_MAX;
 				int sumOfDigits[28];
 				for (int i = 0; i < 28; ++i)
 				{
@@ -2193,13 +2193,117 @@ namespace ege
 				}
 				for (int i = 0; i > 28; ++i)
 				{
-					if (sumOfDigits[i] < firstMax)
+					if (sumOfDigits[i] <= lastMin)
 					{
-						firstMax = sumOfDigits[i];
-						indexOfFirstMax = i;
+						lastMin = sumOfDigits[i];
+						indexOfLastMin = i;
 					}
 				}
-				cout << indexOfFirstMax;
+				cout << indexOfLastMin;
+			}
+
+			void task13503()
+			{
+				int n;
+				cin >> n;
+				int digits[10];
+				int maxFrequencyOfDigit = INT_MIN;
+				for (int i = 0; i < 10; i++)
+				{
+					digits[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					int number = 0;
+					cin >> number;
+					while (number != 0)
+					{
+						int digit = number % 10;
+						++digits[digit];
+						number /= 10;
+					}
+				}
+				for (int i = 0; i < 10; i++)
+				{
+					if (digits[i] > maxFrequencyOfDigit)
+					{
+						maxFrequencyOfDigit = digits[i];
+					}
+				}
+				for (int i = 9; i >= 0; --i)
+				{
+					if (digits[i] == maxFrequencyOfDigit)
+					{
+						cout << i << " ";
+					}
+				}
+			}
+
+			void task13530()
+			{
+				int n;
+				cin >> n;
+				int digits[10];
+				int maxFrequencyOfDigit = INT_MIN;
+				int lastMin = INT_MAX;
+				int indexOfLastMin = -1;
+				for (int i = 0; i < 10; i++)
+				{
+					digits[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					int number;
+					cin >> number;
+					while (number != 0)
+					{
+						int digit = number % 10;
+						number /= 10;
+						++digits[digit];
+					}
+				}
+				for (int i = 0; i < 10; i++)
+				{
+					if (digits[i] >= maxFrequencyOfDigit)
+					{
+						maxFrequencyOfDigit = digits[i];
+						indexOfLastMin = i;
+					}
+				}
+				cout << indexOfLastMin;
+			}
+
+			void task13611()
+			{
+				int n;
+				cin >> n;
+				int lengths[9];
+				int maxOfLengths = INT_MIN;
+				int indexOfLastMin = -1;
+				for (int i = 0; i < 9; i++)
+				{
+					lengths[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					int number;
+					cin >> number;
+					int amount = 0;
+					while (number != 0)
+					{
+						++amount;
+						number /= 10;
+					}
+					++lengths[amount];
+				}
+				for (int i = 0; i < 10; i++)
+				{
+					if (lengths[i] >= maxOfLengths)
+					{
+						maxOfLengths = lengths[i];
+						indexOfLastMin = i;
+					}
+				}
 			}
 		}
 		// end of namespace ege274
