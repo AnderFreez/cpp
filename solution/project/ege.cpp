@@ -2305,6 +2305,75 @@ namespace ege
 					}
 				}
 			}
+			
+			void task13638()
+			{
+				int n;
+				cin >> n;
+				int lengths[9];
+				int minOfLengths = INT_MIN;
+				int indexOfFirstMin = -1;
+				for (int i = 0; i < 9; i++)
+				{
+					lengths[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					int number;
+					cin >> number;
+					int amount = 0;
+					while (number != 0)
+					{
+						++amount;
+						number /= 10;
+					}
+					++lengths[amount];
+				}
+				for (int i = 0; i < 10; i++)
+				{
+					if (lengths[i] <= minOfLengths)
+					{
+						minOfLengths = lengths[i];
+						indexOfFirstMin = i;
+					}
+				}
+			}
+
+			void task14242()
+			{
+				int n = 0;
+				cin >> n;
+				int indexOfFirstMax = -1;
+				int lastMax = INT_MIN;
+				int sumOfDigits[28];
+				for (int i = 0; i <10; ++i)
+				{
+					sumOfDigits[i] = 0;
+				}
+				int number = 0;
+				for (int i = 0; i < n; ++i)
+				{
+					cin >> number;
+					int sum = 0;
+					while (number != 0)
+					{
+						int digit = number % 10;
+						int digit2 = number % 100;
+						sum += digit + digit2;
+						number /= 10;
+					}
+					++sumOfDigits[sum];
+				}
+				for (int i = 0; i < 10; ++i)
+				{
+					if (sumOfDigits[i] > lastMax)
+					{
+						lastMax = sumOfDigits[i];
+						indexOfFirstMax = i;
+					}
+				}
+				cout << indexOfFirstMax;
+			}
 		}
 		// end of namespace ege274
 	}
