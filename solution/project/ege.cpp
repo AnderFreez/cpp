@@ -2305,7 +2305,7 @@ namespace ege
 					}
 				}
 			}
-			
+
 			void task13638()
 			{
 				int n;
@@ -2346,7 +2346,7 @@ namespace ege
 				int indexOfFirstMax = -1;
 				int lastMax = INT_MIN;
 				int sumOfDigits[28];
-				for (int i = 0; i <10; ++i)
+				for (int i = 0; i < 10; ++i)
 				{
 					sumOfDigits[i] = 0;
 				}
@@ -2373,6 +2373,37 @@ namespace ege
 					}
 				}
 				cout << indexOfFirstMax;
+			}
+
+			void task14286()
+			{
+				int n;
+				cin >> n;
+				int number;
+				int a[19];
+				int minFrequencyOfDigit = INT_MAX;
+				int indexOfLastMin = -1;
+				for (int i = 0; i < 19; i++)
+				{
+					a[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					cin >> number;
+					int digit1 = number % 10;
+					int digit2 = (number / 10) % 10;
+					int sum = digit1 + digit2;
+					++a[sum];
+				}
+				for (int i = 0; i < 19; i++)
+				{
+					if (a[i] < minFrequencyOfDigit && a[i] > 0)
+					{
+						minFrequencyOfDigit = a[i];
+						indexOfLastMin = i;
+					}
+				}
+				cout << indexOfLastMin;
 			}
 		}
 		// end of namespace ege274
