@@ -2374,6 +2374,112 @@ namespace ege
 				}
 				cout << indexOfFirstMax;
 			}
+
+			void task14286()
+			{
+				int n;
+				cin >> n;
+				int lengths[9];
+				int minOfLengths = INT_MIN;
+				int indexOfFirstMin = -1;
+				for (int i = 0; i < 9; i++)
+				{
+					lengths[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					int number;
+					cin >> number;
+					int amount = 0;
+					while (number != 0)
+					{
+						++amount;
+						number /= 10;
+					}
+					++lengths[amount];
+				}
+				for (int i = 0; i < 10; i++)
+				{
+					if (lengths[i] <= minOfLengths)
+					{
+						minOfLengths = lengths[i];
+						indexOfFirstMin = i;
+					}
+				}
+			}
+
+			void task11363()
+			{
+				int n = 0;
+				cin >> n;
+				int sumOfMax = 0;
+				int minSubtructNotDividedBy3 = INT_MAX;
+				int amount = 0;
+				int a = 0;
+				int b = 0;
+				for (int i = 0; i < n; ++i)
+				{
+					cin >> a >> b;
+					if (a > b)
+					{
+						sumOfMax += a;
+					}
+					else
+					{
+						sumOfMax += b;
+					}
+					if (abs(a - b) < minSubtructNotDividedBy3 && abs(a - b) % 3 != 0)
+					{
+						minSubtructNotDividedBy3 = abs(a - b);
+						++amount;
+					}
+				}
+				if (sumOfMax % 3 != 0)
+				{
+					cout << sumOfMax;
+					return;
+				}
+				if (amount == 0)
+				{
+					cout << 0;
+					return;
+				}
+				cout << sumOfMax - minSubtructNotDividedBy3;
+			}
+
+			void task13476()
+			{
+				int n = 0;
+				cin >> n;
+				int indexOfLastMin = -1;
+				int lastMin = INT_MAX;
+				int sumOfDigits[28];
+				for (int i = 0; i < 28; ++i)
+				{
+					sumOfDigits[i] = 0;
+				}
+				int number = 0;
+				for (int i = 0; i < n; ++i)
+				{
+					cin >> number;
+					int sum = 0;
+					while (number != 0)
+					{
+						sum += number % 10;
+						number /= 10;
+					}
+					++sumOfDigits[sum];
+				}
+				for (int i = 0; i > 28; ++i)
+				{
+					if (sumOfDigits[i] <= lastMin)
+					{
+						lastMin = sumOfDigits[i];
+						indexOfLastMin = i;
+					}
+				}
+				cout << indexOfLastMin;
+			}
 		}
 		// end of namespace ege274
 	}
