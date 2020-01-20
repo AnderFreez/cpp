@@ -230,13 +230,17 @@ namespace ege
 
 			void task14286();
 
-			void task11363();
+			void tas2k11363();
 
-			void task13476();
+			void tas2k13476();
 
 			void task14242();	
 
 			void task14286();
+
+			void task13557();
+
+			void task13754();
 		}
 		// end of namespace ege274
 	}

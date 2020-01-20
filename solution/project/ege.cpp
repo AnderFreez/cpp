@@ -2380,7 +2380,7 @@ namespace ege
 				int n;
 				cin >> n;
 				int lengths[9];
-				int minOfLengths = INT_MIN;
+				int minOfLengths = INT_MAX;
 				int indexOfFirstMin = -1;
 				for (int i = 0; i < 9; i++)
 				{
@@ -2400,15 +2400,16 @@ namespace ege
 				}
 				for (int i = 0; i < 10; i++)
 				{
-					if (lengths[i] <= minOfLengths)
+					if (lengths[i] <= minOfLengths && lengths[i] > 0)
 					{
 						minOfLengths = lengths[i];
 						indexOfFirstMin = i;
 					}
 				}
+				cout << indexOfFirstMin;
 			}
 
-			void task11363()
+			void tas2k11363()
 			{
 				int n = 0;
 				cin >> n;
@@ -2447,7 +2448,7 @@ namespace ege
 				cout << sumOfMax - minSubtructNotDividedBy3;
 			}
 
-			void task13476()
+			void tas2k13476()
 			{
 				int n = 0;
 				cin >> n;
@@ -2470,36 +2471,79 @@ namespace ege
 					}
 					++sumOfDigits[sum];
 				}
-				for (int i = 0; i > 28; ++i)
+				for (int i = 0; i < 28; ++i)
 				{
-					if (sumOfDigits[i] <= lastMin)
+					if (sumOfDigits[i] <= lastMin && sumOfDigits[i] > 0)
 					{
 						lastMin = sumOfDigits[i];
-				int number;
-				int a[19];
-				int minFrequencyOfDigit = INT_MAX;
-				int indexOfLastMin = -1;
-				for (int i = 0; i < 19; i++)
-				{
-					a[i] = 0;
-				}
-				for (int i = 0; i < n; i++)
-				{
-					cin >> number;
-					int digit1 = number % 10;
-					int digit2 = (number / 10) % 10;
-					int sum = digit1 + digit2;
-					++a[sum];
-				}
-				for (int i = 0; i < 19; i++)
-				{
-					if (a[i] < minFrequencyOfDigit && a[i] > 0)
-					{
-						minFrequencyOfDigit = a[i];
 						indexOfLastMin = i;
 					}
 				}
 				cout << indexOfLastMin;
+			}
+
+			void task13557()
+			{
+				int n = 0;
+				cin >> n;
+				int s = 0;
+				int amount = 0;
+				int minNotDividedBy6 = INT_MAX;
+				int a = 0;
+				for (int i = 0; i < n; i++)
+				{
+					cin >> a;
+					s += a;
+					if (a % 6 != 0 && a < minNotDividedBy6)
+					{
+						minNotDividedBy6 = a;
+						++amount;
+					}
+				}
+
+				if (s % 6 != 0)
+				{
+					cout << n << " " << s;
+					return;
+				}
+				if (amount != 0)
+				{
+					cout << n - 1 << " " << s - minNotDividedBy6;
+					return;
+				}
+				cout << 0 << " " << 0;
+			}
+
+			void task13754()
+			{
+				int n = 0;
+				cin >> n;
+				int n2 = 0;
+				int n13 = 0;
+				int n26 = 0;
+				int n0 = 0;
+				int a = 0;
+				for (int i = 0; i < n; i++)
+				{
+					cin >> a;
+					if (a % 2 == 0 && a % 13 != 0)
+					{
+						++n2;
+					}
+					if (a % 2 != 0 && a % 13 == 0)
+					{
+						++n13;
+					}
+					if (a % 2 == 0 && a % 13 == 0)
+					{
+						++n26;
+					}
+					if (a % 2 != 0 && a % 13 != 0)
+					{
+						++n0;
+					}
+				}
+				cout << n2 * n13 + n2 * n26 + n0 * n26 + n26 * (n26 - 1) / 2;
 			}
 		}
 		// end of namespace ege274
