@@ -2686,8 +2686,16 @@ namespace ege
 						cout << "YA NE PONYAL!!!";
 					}
 				}
+			}
 
-				
+			void task()
+			{
+
+			}
+
+			void task()
+			{
+
 			}
 		}
 		// end of namespace ege274
