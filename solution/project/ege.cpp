@@ -2616,86 +2616,104 @@ namespace ege
 				}
 			}
 
+			void task14713()
+			{
+				int n = 0;
+				cin >> n;
+				int maxRemainber[7];
+				for (int i = 0; i < 7; i++)
+				{
+					maxRemainber[i] = 0;
+				}
+				for (int i = 0; i < n; i++)
+				{
+					int number = 0;
+					cin >> number;
+					int remainber = number % 7;
+					++maxRemainber[remainber];
+				}
+				int result = 0;
+				for (int i = 1; i <= 6; ++i)
+				{
+					result += maxRemainber[i] * maxRemainber[7 - i];
+				}
+				result += maxRemainber[0] * (maxRemainber[0] - 1) / 2;
+				cout << result;
+			}
+
 			void task18806()
 			{
 				int n = 0;
 				cin >> n;
-				int maximalnayaSumma = 0;
-				int maximum01 = 0;
-				int maximum02 = 0;
-				int summa = 1;
-				int ostatok = 0;
-				int chislo1 = 0;
-				int chislo2 = 0;
-				int maximalnueOstatok[177];
-				for (int i = 0; i < 177; i++)
+				int maxRemainder[120];
+				for (int i = 1; i < 120; i++)
 				{
-					maximalnueOstatok[i] = 0;
+					maxRemainder[i] = 0;
 				}
+				int max01 = 0;
+				int max02 = 0;
 				for (int i = 0; i < n; i++)
 				{
-					int chislo = 0;
-					cin >> chislo;
-					ostatok = chislo % 117;
-					if (chislo > maximalnueOstatok[ostatok])
+					int number = 0;
+					cin >> number;
+					int remainder = number % 120;
+					if (number > maxRemainder[remainder])
 					{
-						maximalnueOstatok[ostatok] = chislo;
+						maxRemainder[remainder] = number;
 					}
-					if (ostatok == 0)
+					if (remainder == 0)
 					{
-						if (chislo <= maximum02)
+						if (number <= max02)
 						{
 
 						}
-						if (chislo > maximum02 && chislo <= maximum01)
+						if (number > max02&& number <= max01)
 						{
-							maximum02 = chislo;
+							max02 = number;
 						}
-						if (chislo > maximum01)
+						if (number > max01)
 						{
-							maximum02 = maximum01;
-							maximum01 = chislo;
-						}
-					}
-					for (int i = 1; i < 59; i++)
-					{
-						if (maximalnueOstatok[i] != 0 && maximalnueOstatok[117 - i] != 0)
-						{
-							int sum = maximalnueOstatok[i] + maximalnueOstatok[117 - i];
-							if (sum > maximalnayaSumma)
-							{
-								maximalnayaSumma = sum;
-								chislo1 = maximalnueOstatok[i];
-								chislo2 = maximalnueOstatok[117 - i];
-							}
+							max02 = max01;
+							max01 = number;
 						}
 					}
-					if ((maximum01 != 0 && maximum02 != 0) || (maximalnayaSumma != 0))
+				}
+				int maxSum = 0;
+				int n1 = 0;
+				int n2 = 0;
+				for (int i = 1; i < 60; i++)
+				{
+					if (maxRemainder[i] != 0 && maxRemainder[120 - i] != 0)
 					{
-						if (maximum01 + maximum02 > maximalnayaSumma)
+						int sum = maxRemainder[i] + maxRemainder[120 - i];
+						if (sum > maxSum)
 						{
-							cout << maximum01 << " " << maximum02;
+							maxSum = sum;
+							n1 = maxRemainder[i];
+							n2 = maxRemainder[120 - i];
 						}
-						else
-						{
-							cout << chislo1 << " " << chislo2;
-						}
+					}
+				}
+				if ((max01 != 0 && max02 != 0) || (maxSum != 0))
+				{
+					if (max01 + max02 > maxSum)
+					{
+						cout << max01 << " " << max02;
 					}
 					else
 					{
-						cout << "YA NE PONYAL!!!";
+						cout << n1 << " " << n2;
 					}
+				}
+				else
+				{
+					cout << "NO";
 				}
 			}
 
-			void task()
+			void task9078()
 			{
-
-			}
-
-			void task()
-			{
-
+				
 			}
 		}
 		// end of namespace ege274
