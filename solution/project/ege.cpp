@@ -2710,11 +2710,6 @@ namespace ege
 					cout << "NO";
 				}
 			}
-
-			void task9078()
-			{
-				
-			}
 		}
 		// end of namespace ege274
 	}
