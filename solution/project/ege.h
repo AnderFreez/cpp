@@ -250,7 +250,9 @@ namespace ege
 			
 			void task18806();
 
-			void task9078();
+			void task9708();
+
+			void task6971();
 		}
 		// end of namespace ege274
 	}

@@ -2710,6 +2710,128 @@ namespace ege
 					cout << "NO";
 				}
 			}
+
+			void task9708()
+			{
+				int n = 0;
+				cin >> n;
+				int a = 0;
+				int max141 = 0;
+				int max142 = 0;
+				int max2 = 0;
+				int max0 = 0;
+				int max7 = 0;
+				int maxmax = 0;
+				for (int i = 0; i < n; i++)
+				{
+					cin >> a;
+					if (a % 2 == 0 && a % 7 == 0)
+					{
+						if (a <= max142)
+						{
+
+						}
+						if (a > max142&& max141 >= a)
+						{
+							max142 = a;
+						}
+						if (a > max141)
+						{
+							max142 = max141;
+							max141 = a;
+						}
+					}
+					if (a % 2 == 0 && a % 7 != 0 && a > max2)
+					{
+						max2 = a;
+					}
+					if (a % 2 != 0 && a % 7 == 0 && a > max7)
+					{
+						max7 = a;
+					}
+					if (a % 2 != 0 && a % 7 != 0 && a > max0)
+					{
+						max0 = a;
+					}
+				}
+				if (max2 * max7 > maxmax)
+				{
+					maxmax = max2 * max7;
+				}
+				if (max141 * max7 > maxmax)
+				{
+					maxmax = max141 * max7;
+				}
+				if (max141 * max2 > maxmax)
+				{
+					maxmax = max141 * max2;
+				}
+				if (max141 * max0 > maxmax)
+				{
+					maxmax = max141 * max0;
+				}
+				if (max141 * max142 > maxmax)
+				{
+					maxmax = max141 * max142;
+				}
+				cout << maxmax;
+			}
+
+			void task6971()
+			{
+				int n = 0;
+				cin >> n;
+				int r = 0;
+				int max51 = 0;
+				int max52 = 0;
+				int max21 = 0;
+				int max22 = 0;
+				int max01 = 0;
+				int max02 = 0;
+				for (int i = 0; i < n; i++)
+				{
+					if (r <= max52)
+					{
+
+					}
+					if (r > max52&& max51 >= r)
+					{
+						max52 = r;
+					}
+					if (r > max51)
+					{
+						max52 = max51;
+						max51 = r;
+					}
+					if (r <= max22)
+					{
+
+					}
+					if (r > max22&& max21 >= r)
+					{
+						max22 = r;
+					}
+					if (r > max21)
+					{
+						max22 = max21;
+						max21 = r;
+					}
+					if (r <= max02)
+					{
+
+					}
+					if (r > max02&& max01 >= r)
+					{
+						max02 = r;
+					}
+					if (r > max01)
+					{
+						max02 = max01;
+						max01 = r;
+					}
+				}
+				cout << 0;
+			}
 		}
 		// end of namespace ege274
 	}
