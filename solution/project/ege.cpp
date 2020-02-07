@@ -2832,6 +2832,154 @@ namespace ege
 				}
 				cout << 0;
 			}
+
+			void task6202()
+			{
+				setlocale(LC_ALL, "russian");
+				int number;
+				int znach;
+				int znach2 = 1;
+				int amount = 0;
+				int max = INT_MIN;
+				int max0 = INT_MIN;
+				int max7 = INT_MIN;
+				cin >> number;
+				while (number != 0)
+				{
+					if (number % 7 == 0 && number % 49 != 0 && number > max7)
+					{
+						max7 = number;
+					}
+					if (number % 7 != 0 && number % 49 != 0 && number > max)
+					{
+						max0 = number;
+					}
+					cin >> number;
+					++amount;
+				}
+				cin >> znach;
+				znach2 = max7 * max0;
+				if (znach2 % 7 == 0 && znach2 % 49 != 0)
+				{
+					if (znach == znach2)
+					{
+						cout << "Введено чисел:" << amount << endl << "Контрольное значение:" << znach << endl << "Вычисленное значение:" << znach2 << endl << "Значения совпали";
+					}
+					else
+					{
+						cout << "Введено чисел:" << amount << endl << "Контрольное значение:" << znach << endl << "Вычисленное значение:" << znach2 << endl << "Значения не совпали";
+					}
+				}
+			}
+
+			void task13373()
+			{
+				setlocale(LC_ALL, "russian");
+				int n;
+				cin >> n;
+				int r;
+				int max262 = 0;
+				int max13 = 0;
+				int max2 = 0;
+				int max0 = 0;
+				int max261 = 0;
+				int maxmax = 0;
+				int znach = 0;
+				int number = 0;
+				for (int i = 0; i < n; i++)
+				{
+					cin >> number;
+					if (number % 2 == 0 && number % 13 != 0 && number > max2)
+					{
+						max2 = number;
+					}
+					if (number % 2 != 0 && number % 13 == 0 && number > max13)
+					{
+						max13 = number;
+					}
+					if (number % 2 != 0 && number % 13 != 0 && number > max0)
+					{
+						max0 = number;
+					}
+					if (number % 2 == 0 && number % 13 == 0)
+					{
+						if (number <= max262)
+						{
+
+						}
+						if (number > max262&& max261 >= number)
+						{
+							max262 = number;
+						}
+						if (number > max261)
+						{
+							max262 = max261;
+							max261 = number;
+						}
+					}
+				}
+				cin >> znach;
+				if (max2 * max13 > maxmax)
+				{
+					maxmax = max2 * max13;
+				}
+				if (max261 * max13 > maxmax)
+				{
+					maxmax = max261 * max13;
+				}
+				if (max261 * max2 > maxmax)
+				{
+					maxmax = max261 * max2;
+				}
+				if (max261 * max0 > maxmax)
+				{
+					maxmax = max261 * max0;
+				}
+				if (max261 * max262 > maxmax)
+				{
+					maxmax = max261 * max262;
+				}
+				if (maxmax == znach)
+				{
+					cout << "Вычисленное контрольное значение:" << maxmax << endl << "Контроль пройден";
+				}
+				else
+				{
+					cout << "Вычисленное контрольное значение:" << maxmax << endl << "Контроль не пройден";
+				}
+			}
+
+			void task18096()
+			{
+				int n;
+				cin >> n;
+				int n31 = 0;
+				int n2 = 0;
+				int n62 = 0;
+				int n0 = 0;
+				int number = 0;
+				for (int i = 0; i < n; i++)
+				{
+					cin >> number;
+					if (number % 2 == 0 && number % 31 == 0)
+					{
+						++n62;
+					}
+					if (number % 2 != 0 && number % 31 == 0)
+					{
+						++n31;
+					}
+					if (number % 2 == 0 && number % 31 != 0)
+					{
+						++n2;
+					}
+					if (number % 2 != 0 && number % 31 != 0)
+					{
+						++n0;
+					}
+				}
+				cout << n62 * n2 + n62 * n31 + n62 * n0 + (n62 * (n62 - 1) / 2) + n31 * n2;
+			}
 		}
 		// end of namespace ege274
 	}
