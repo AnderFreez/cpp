@@ -2832,6 +2832,11 @@ namespace ege
 				}
 				cout << 0;
 			}
+
+			void task()
+			{
+				
+			}
 		}
 		// end of namespace ege274
 	}
