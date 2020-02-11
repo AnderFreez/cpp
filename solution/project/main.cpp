@@ -14,6 +14,6 @@ using namespace std;
 
 int main()
 {
-	ege::ege27::ege274::task9708();
+	ege::ege27::ege274::task18096();
 	return 0;
 }
