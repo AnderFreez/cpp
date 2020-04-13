@@ -12,8 +12,18 @@
 
 using namespace std;
 
+void swap(int a, int b)
+{
+	int t = a;
+	a = b;
+	b = t;
+	
+}
 int main()
 {
-	ege::ege27::ege274::task18096();
+	int k = 20;
+	int m = 10;
+	swap(m, k);
+	cout << m << " " << k;
 	return 0;
 }
