@@ -14,6 +14,27 @@ struct Node
 	}
 };
 
+void rotate(int* a, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cin >> a[i];
+	}
+	a[0] = a[size];
+	int temp;
+	for (int i = 0; i < size; ++i)
+	{
+		temp = a[i];
+		a[i] = a[i - 1];
+		a[a - 1] = temp;
+	}
+	a[size] = a[0];
+	for (int i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}
+}
+
 struct List
 {
 	Node* head;
