@@ -5,19 +5,22 @@ using namespace std;
 
 using namespace home26042020;
 
+void yjas(int n)
+{
+	int p = 1;
+	int answer = 1;
+	while (answer <= n)
+	{
+		answer *= 2;
+		++p;
+	}
+	p -= 2;
+	cout << p;
+}
+
 int main()
 {
-	char s[10];
-	int i = 0;
-	while (cin.get(s[i]))
-	{
-		++i;
-	}
-
-	cout << endl;
-	for (int i = 0; i < 10; ++i)
-	{
-		cout << s[i];
-	}
+	int n = 33;
+	yjas(n);
 	return 0;
 }
